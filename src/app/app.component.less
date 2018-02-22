@@ -1,0 +1,66 @@
+@import "../styles";
+.screen-rotation-tip{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: whitesmoke;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: @zInRotationTip;
+}
+
+@media screen {
+  @media (max-width:@minScreenWidth){
+    .screen-rotation-tip{
+      display: flex;
+    }
+  }
+}
+
+.page-body{
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  .right-navigation{
+    height: 100%;
+    width: 13%;
+    flex-shrink: 0;
+    padding: 0 .5%;
+  }
+  .left-content{
+    width: 100%;
+    height: 97%;
+    box-sizing: border-box;
+    margin: 0 2%;
+    background-color: rgba(125,125,125,.2);
+    padding: 1% 2% 0 0;
+    display: block;
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      top: -10px;
+      height: 3px;
+      background-color: whitesmoke;
+      animation: 2s lineAnimate forwards ease;
+    }
+  }
+}
+@keyframes lineAnimate {
+  0%{
+    width: 2%;
+    left: 49%;
+    right: 49%;
+    opacity: .3;
+  }
+  100%{
+    width: 90%;
+    left: 5%;
+    right: 5%;
+    opacity: .5;
+  }
+}
