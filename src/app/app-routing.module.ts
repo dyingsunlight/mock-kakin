@@ -6,6 +6,7 @@ import { url } from './config';
 const routes: Routes = [
   {
     path: url.base + '',
+    pathMatch: 'full',
     component: StandradSupplementComponent
   }
 ];

@@ -9,24 +9,28 @@ import { url } from '../config';
 
 const routes: Routes = [
   {
-    path: url.base + 'standard',
+    path: 'standard',
     component: StandradSupplementComponent
   },
   {
-    path: url.base + 'customize',
+    path: 'customize',
     component: CustomizeSupplementComponent
   },
   {
-    path: url.base + 'precision',
+    path: 'precision',
     component: PrecisionSupplementComponent
   },
   {
-    path: url.base + 'customize-config',
+    path: 'customize-config',
     component: CustomizeConfigComponent
   },
   {
-    path: url.base + 'test',
+    path: 'test',
     component: GachaTestComponent
+  },
+  {
+    path: '**',
+    component: StandradSupplementComponent
   }
 ];
 
