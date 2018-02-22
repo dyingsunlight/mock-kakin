@@ -3,7 +3,7 @@ import { environment } from '../environments/environment';
 let base = 'assets';
 
 if (environment.production) {
-  base = `${base}/mock-kakin`;
+  base = `/mock-kakin/${base}`;
 }
 console.log(environment.production);
 export const url = {
