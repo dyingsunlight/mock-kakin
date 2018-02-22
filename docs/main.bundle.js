@@ -193,10 +193,16 @@ var AppModule = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return url; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
+
+var base = 'assets/';
+if (__WEBPACK_IMPORTED_MODULE_0__environments_environment__["a" /* environment */].production) {
+    base += '/mock-kakin/';
+}
 var url = {
-    basePath: 'assets/images/',
-    imageBasePath: 'assets/images/icons/',
-    gachaBasePath: 'assets/images/gacha/'
+    basePath: base + 'images/',
+    imageBasePath: base + 'images/icons/',
+    gachaBasePath: base + 'images/gacha/'
 };
 
 
