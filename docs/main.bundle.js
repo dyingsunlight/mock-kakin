@@ -36,7 +36,7 @@ var routes = [
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'standard'
+        redirectTo: './standard'
     }
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -58,7 +58,7 @@ var AppRoutingModule = /** @class */ (function () {
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"screen-rotation-tip\">\n  <p>\n    请将手机横屏以获得最佳的显示效果！\n  </p>\n</div>\n<app-gacha-reveal [bg]=\"'GachaBG'\"></app-gacha-reveal>\n<div class=\"container img-GaChaBG\">\n  <div class=\"top-navigation\"></div>\n  <div class=\"page-body\">\n    <div class=\"left-content\">\n      <router-outlet></router-outlet>\n    </div>\n    <div class=\"right-navigation\">\n      <app-image-in-button   [icon]=\"'HCoin'\" link=\"/standard/\" [width]=\"100\">\n        标配\n      </app-image-in-button>\n      <app-image-in-button [icon]=\"'HCoin'\" link=\"/precision/\" [width]=\"100\">\n        精准\n      </app-image-in-button>\n      <app-image-in-button [icon]=\"'HCoin'\" link=\"/customize-config/\" [width]=\"100\">\n        配置\n      </app-image-in-button>\n      <app-image-in-button [icon]=\"'HCoin'\" link=\"/test/\" [width]=\"100\">\n        测试\n      </app-image-in-button>\n      <!--app-image-in-button [icon]=\"'HCoin'\" link=\"/customize/\" [width]=\"100\">\n        自定义\n      </app-image-in-button>\n      <app-image-in-button [icon]=\"'HCoin'\" link=\"/test/\" [width]=\"100\">\n        概率测试\n      </app-image-in-button-->\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"screen-rotation-tip\">\n  <p>\n    请将手机横屏以获得最佳的显示效果！\n  </p>\n</div>\n<app-gacha-reveal [bg]=\"'GachaBG'\"></app-gacha-reveal>\n<div class=\"container img-GaChaBG\">\n  <div class=\"top-navigation\"></div>\n  <div class=\"page-body\">\n    <div class=\"left-content\">\n      <router-outlet></router-outlet>\n    </div>\n    <div class=\"right-navigation\">\n      <app-image-in-button   [icon]=\"'HCoin'\" link=\"standard/\" [width]=\"100\">\n        标配\n      </app-image-in-button>\n      <app-image-in-button [icon]=\"'HCoin'\" link=\"precision/\" [width]=\"100\">\n        精准\n      </app-image-in-button>\n      <app-image-in-button [icon]=\"'HCoin'\" link=\"customize-config/\" [width]=\"100\">\n        配置\n      </app-image-in-button>\n      <app-image-in-button [icon]=\"'HCoin'\" link=\"test/\" [width]=\"100\">\n        测试\n      </app-image-in-button>\n      <!--app-image-in-button [icon]=\"'HCoin'\" link=\"/customize/\" [width]=\"100\">\n        自定义\n      </app-image-in-button>\n      <app-image-in-button [icon]=\"'HCoin'\" link=\"/test/\" [width]=\"100\">\n        概率测试\n      </app-image-in-button-->\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
