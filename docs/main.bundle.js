@@ -197,12 +197,13 @@ var AppModule = /** @class */ (function () {
 
 var base = 'assets';
 if (__WEBPACK_IMPORTED_MODULE_0__environments_environment__["a" /* environment */].production) {
-    base = base + "/mock-kakin/";
+    base = base + "/mock-kakin";
 }
+console.log(__WEBPACK_IMPORTED_MODULE_0__environments_environment__["a" /* environment */].production);
 var url = {
-    basePath: base + 'images/',
-    imageBasePath: base + 'images/icons/',
-    gachaBasePath: base + 'images/gacha/'
+    basePath: base + '/images/',
+    imageBasePath: base + '/images/icons/',
+    gachaBasePath: base + '/images/gacha/'
 };
 
 
