@@ -5,26 +5,27 @@ import { CustomizeSupplementComponent } from './customize-supplement/customize-s
 import { CustomizeConfigComponent } from './customize-config/customize-config.component';
 import { GachaTestComponent } from './gacha-test/gacha-test.component';
 import { PrecisionSupplementComponent } from './precision-supplement/precision-supplement.component';
+import { url } from '../config';
 
 const routes: Routes = [
   {
-    path: 'standard',
+    path: url.base + 'standard',
     component: StandradSupplementComponent
   },
   {
-    path: 'customize',
+    path: url.base + 'customize',
     component: CustomizeSupplementComponent
   },
   {
-    path: 'precision',
+    path: url.base + 'precision',
     component: PrecisionSupplementComponent
   },
   {
-    path: 'customize-config',
+    path: url.base + 'customize-config',
     component: CustomizeConfigComponent
   },
   {
-    path: 'test',
+    path: url.base + 'test',
     component: GachaTestComponent
   }
 ];
