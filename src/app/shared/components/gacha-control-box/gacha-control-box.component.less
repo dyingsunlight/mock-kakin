@@ -1,0 +1,111 @@
+.gacha-control-box{
+  display: flex;
+  padding: 1.5% 0;
+  box-sizing: border-box;
+  height: 100%;
+  flex-shrink: 0;
+  width: 100%;
+  justify-content: space-between;
+  .box{
+    width: 49%;
+    height: 100%;
+    box-shadow: 1px 1px 10px 0px gray;
+    border-radius: 3px;
+    position: relative;
+    .item-tip{
+      text-align: center;
+      height: 22%;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h1{
+        padding: 0;
+        color: lightgray;
+        font-size: 14px;
+        font-weight: 900;
+      }
+    }
+    .item-amount{
+      text-align: center;
+      height: 19%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span{
+        font-size: 16px;
+        font-style: italic;
+        font-weight: 900;
+        &:before{
+          position: absolute;
+          left: -20px;
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+    .item-detail{
+      text-align: center;
+      height: 13.5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span{
+        font-size: 10px;
+        font-weight: 900;
+        color: gray;
+      }
+    }
+    .item-control{
+      height: 45%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .button{
+        width: 80%;
+        height: 60%;
+        border-radius: 5px;
+        background-color: #ffdd21;
+        margin: 5%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        transition: .5s;
+        .text{
+          font-weight: 900;
+          font-size: 14px;
+          color: black;
+          display: block;
+          width: 100%;
+          text-align: center;
+        }
+        .amount{
+          display: block;
+          width: 60%;
+          border-radius: 5px;
+          font-size: 14px;
+          margin: 0 auto;
+          font-weight: 900;
+          background-color: rgba(125,125,125,.5);
+          text-align: center;
+          color: whitesmoke;
+        }
+
+        &:hover{
+          filter: brightness(1.05)
+        }
+      }
+    }
+
+    .right-tip{
+      position: absolute;
+      right: -5%;
+      top: 5%;
+      height: 35%;
+      width: auto;
+    }
+  }
+}

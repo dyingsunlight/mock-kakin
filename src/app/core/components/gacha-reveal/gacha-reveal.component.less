@@ -1,0 +1,27 @@
+@import "../../../../styles";
+
+.gacha-reveal{
+  z-index: @zInGachaReveal;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  .content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+
+    app-reveal-item{
+      height: 100%;
+      width: 50%;
+    }
+  }
+  .background{
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+

@@ -1,0 +1,9 @@
+<div class="gacha-reveal" *ngIf="item1 && item2">
+  <div class="content">
+    <!--img [src]="current.file" (click)="nextItem()"/-->
+    <app-reveal-item *ngIf="item1" [item]="item1" (update)="nextItem($event)" [isRevealed]="isRevealed" (click)="isRevaled = true"></app-reveal-item>
+    <app-reveal-item *ngIf="item2" [item]="item2" (update)="nextItem($event)" [isRevealed]="isRevealed" (click)="isRevaled = true"></app-reveal-item>
+  </div>
+  <img class="background" [src]="bg"/>
+</div>
+<app-overview-items *ngIf="isOverviewActive" [background]="bg" [items]="itemList" (close)="closeOvewview()"></app-overview-items>

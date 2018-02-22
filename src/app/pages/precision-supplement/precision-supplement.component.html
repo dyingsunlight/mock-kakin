@@ -1,0 +1,16 @@
+<div class="kakin">
+  <div class="kakin-content">
+    <app-gacha-banner
+      [banner]="'precision-supplement'"
+      [title]="'GachaPic_2'"
+      [text]="'精准补给'"
+    >
+    </app-gacha-banner>
+    <app-gacha-control-box
+      [text]="'每十次补给必定会有4星或以上装备圣痕出现'"
+      [card]="'precision-card'"
+      [tip]="'weapon-tip'"
+      (update)="start($event)"
+    ></app-gacha-control-box>
+  </div>
+</div>

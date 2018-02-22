@@ -1,0 +1,66 @@
+.banner {
+  height: 100%;
+  width: 100%;
+  border: 1px lightgray solid;
+  background-repeat: no-repeat;
+  background-size: 25%;
+  background-position-x: 5%;
+  background-position-y: 10%;
+  position: relative;
+  overflow: hidden;
+  .intro-text {
+    position: absolute;
+    bottom: 5%;
+    max-width: 60%;
+    left: 5%;
+    p {
+      margin: 0;
+      padding: 0;
+      color: whitesmoke;
+      text-shadow: 1px 0px black;
+      font-weight: 900;
+      font-size: 12px;
+    }
+    &:before {
+      content: '';
+      height: 100%;
+      width: 2px;
+      position: absolute;
+      top: 0;
+      left: -3%;
+      border-radius: 5px;
+      background-color: deepskyblue;
+    }
+  }
+  >img{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    z-index: -1;
+    transition: .5s;
+    animation: zoomIn 10s forwards;
+    transition-timing-function: ease;
+  }
+  &:active{
+    >img{
+      filter:brightness(0.8)
+    }
+  }
+  @keyframes zoomIn{
+    0%{
+      left: -10%;
+      top: -10%;
+      width: 110%;
+    }
+    100%{
+      width: 100%;
+      left: 0;
+      top: 0;
+    }
+  }
+
+}
+
+
+

@@ -1,0 +1,178 @@
+.reveal-item {
+  width: 100%;
+  height: 100%;
+  .stage {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: none;
+    .content {
+      position: absolute;
+      z-index: 2;
+      img {
+        width: 100%;
+      }
+    }
+    .weave-effect {
+      position: absolute;
+      z-index: 1;
+      img {
+        width: 100%;
+      }
+    }
+    &.active {
+      display: block;
+    }
+  }
+  // 位置大小调整
+  // 图片尺寸不同，需要分别为每个类别设置
+  .stage-1 {
+    .content {
+      margin-top: -10%;
+      width: 20%;
+      left: 40%;
+      top: 50%;
+    }
+    .weave-effect {
+      left: 25%;
+      top: 50%;
+      margin-top: -25%;
+      width: 50%;
+      opacity: .6;
+    }
+    &.active {
+      display: block;
+      .weave-effect {
+        &:first-child {
+          img {
+            animation: weaveEffect 1.5s infinite ease;
+            animation-delay: 1.2s;
+          }
+        }
+        &:last-child {
+          img {
+            animation: weaveEffect 1.5s infinite ease;
+            animation-delay: .3s;
+          }
+        }
+      }
+    }
+  }
+  .stage-2 {
+    .content {
+      left: -10%;
+      top: 30%;
+      margin-top: -20%;
+      width: 120%;
+    }
+    .weave-effect {
+      left: 25%;
+      top: 50%;
+      margin-top: -25%;
+      width: 50%;
+      opacity: .9;
+    }
+    .detail{
+      position: absolute;
+      bottom: 50px;
+      width: 100%;
+      text-align: center;
+      z-index: 3;
+      text-shadow: 2px 2px 10px mediumpurple;
+      span.title{
+        color: white;
+        font-weight: 900;
+        font-size: 1.2rem;
+        display: block;
+      }
+      span.comment{
+        color: whitesmoke;
+        font-weight: 500;
+        font-size: .8rem;
+      }
+      span.stars{
+        display: block;
+      }
+    }
+    &.active {
+      .weave-effect {
+        visibility: hidden;
+      }
+    }
+  }
+
+
+  &.stigmata {
+    .stage-1 .content {
+      margin-top: -20%;
+      width: 40%;
+      left: 30%;
+      top: 50%;
+    }
+    .stage-2 .content {
+      left: 10%;
+      top: 20%;
+      margin-top: -10%;
+      width: 90%;
+    }
+  }
+  &.weapon, &.equipment, &.fragment{
+    .stage-2 .content {
+      left: 30%;
+      top: 60%;
+      margin-top: -30%;
+      width: 40%;
+    }
+  }
+}
+.boundAnimate {
+  animation: boundIn .3s forwards ease;
+}
+@keyframes boundIn {
+  0% {
+    transform: scale(.2) translateY(10px) translateZ(-100px) translateX(10px);
+    opacity: .01;
+  }
+  100% {
+    transform: scale(1) translateY(0) translateZ(0) translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes weaveEffect {
+  0% {
+    transform: scale(0.01);
+    opacity: .9;
+  }
+  80% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes frameGlowEffect {
+  0% {
+    filter: drop-shadow(0px 0px 30px deepskyblue);
+  }
+  100% {
+    filter: drop-shadow(0px 0px 30px deepskyblue);
+  }
+}
+
+@keyframes itemGlowEffect {
+  0% {
+    transform: scale(0.01);
+    opacity: .3;
+  }
+  60% {
+    transform: scale(2);
+    opacity: .9;
+  }
+  100% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+}

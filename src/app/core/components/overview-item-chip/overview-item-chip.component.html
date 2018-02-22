@@ -1,0 +1,13 @@
+<div class="gacha-item-chip" [class.level-4] = "item.level === 4">
+  <div class="image">
+    <img [src]="item.icon" />
+  </div>
+  <div class="stars">
+    <app-star-exhibition [max]="item.level + 1" [current]="item.level" [size]="12" [animate]="false"></app-star-exhibition>
+  </div>
+  <div class="text">
+    <span>
+      {{ typeText[item.type] }}
+    </span>
+  </div>
+</div>

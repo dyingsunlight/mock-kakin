@@ -1,0 +1,31 @@
+<div class="kakin">
+  <div class="kakin-nav">
+    <app-gacha-type-selection
+      [textName]="'valkyrja'"
+      [bgName]="'avatar-grey'"
+      [active]="mode === 'standard'"
+      (click)="switchMode('equipment')"
+    ></app-gacha-type-selection>
+    <app-gacha-type-selection
+      [textName]="'weapon'"
+      [bgName]="'weapon-grey'"
+      [active]="mode === 'equipment'"
+      (click)="switchMode('standard')"
+    ></app-gacha-type-selection>
+  </div>
+  <div class="kakin-content">
+    <app-gacha-banner
+      [banner]="uiConfig[mode].bannerTitleImage"
+      [title]="uiConfig[mode].banner"
+      [text]="uiConfig[mode].bannerText"
+    >
+    </app-gacha-banner>
+    <app-gacha-control-box
+      [text]="uiConfig[mode].itemTips"
+      [card]="uiConfig[mode].cardStyle"
+      [tip]="uiConfig[mode].itemDecoration"
+      (update)="start($event)"
+    ></app-gacha-control-box>
+  </div>
+</div>
+

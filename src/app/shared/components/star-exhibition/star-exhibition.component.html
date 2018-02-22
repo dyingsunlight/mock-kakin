@@ -1,0 +1,13 @@
+<div class="start-exhibition" [ngStyle]="{width: (size - 1)*max + 'px'}">
+  <div class="max-starts">
+    <div class="wrapper" *ngFor="let i of maxStarMap"  [ngStyle]="{width: size + 'px'}">
+      <img [src]="emptyStarGraph" />
+    </div>
+  </div>
+  <div class="current-starts">
+    <div class="wrapper" *ngFor="let i of currentStarMap" [ngStyle]="{width: size + 'px'}">
+      <img [src]="starGraph" />
+    </div>
+  </div>
+</div>
+

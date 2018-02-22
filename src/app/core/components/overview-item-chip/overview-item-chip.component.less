@@ -1,0 +1,56 @@
+.gacha-item-chip{
+  display: block;
+  width: 100%;
+  animation: boundOut .3s forwards ease;
+  position: relative;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding: 3px 1px;
+  .image{
+    width: 100%;
+    background: linear-gradient(to right, rgb(28,119,211), rgb(0,173,229));
+    border-radius: 5px;
+    height: auto;
+    img{
+      width: 100%;
+    }
+  }
+  .text{
+    position: absolute;
+    bottom: -10px;
+    left: 15%;
+    width: 70%;
+    text-align: center;
+    span{
+      font-weight: 500;
+      font-style: italic;
+      font-size: .8rem;
+      display: block;
+      background-color: whitesmoke;
+      border-radius: 5px;
+    }
+  }
+  .stars{
+    position: absolute;
+    bottom: 15px;
+    z-index: 3;
+    width: 100%;
+  }
+
+  &.level-4{
+    .image{
+      background: linear-gradient(to right, rgb(131,99,215), rgb(219,130,244));
+    }
+  }
+}
+
+@keyframes boundOut {
+  0% {
+    transform: scale(1.2) translateY(10px) translateZ(-100px) translateX(10px);
+    opacity: .01;
+  }
+  100% {
+    transform: scale(1) translateY(0) translateZ(0) translateX(0);
+    opacity: 1;
+  }
+}

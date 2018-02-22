@@ -1,0 +1,31 @@
+div.kakin{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  .kakin-nav{
+    height: auto;
+    width: 8%;
+    padding: 0 1%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+  }
+  .kakin-content{
+    width: 90%;
+    // height: 100%;
+    margin: 0 1% 0 2%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    app-gacha-banner{
+      height: 100%;
+      width: 100%;
+    }
+    app-gacha-control-box{
+      max-height: 250px;
+      width: 100%;
+      height: 60%;
+      flex-shrink: 0;
+    }
+  }
+}
+

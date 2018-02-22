@@ -1,0 +1,56 @@
+@import "../../../../styles";
+
+.gacha-reveal-over-view{
+  z-index: @zInGachaRevealOverviewItems;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  .list{
+    padding: 1%;
+    margin: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 96%;
+    overflow-y: scroll;
+    border: 1px solid rgba(255,255,255, .5);
+    border-radius: 15px;
+    align-content: flex-start;
+    app-overview-item-chip{
+      width: 80px;
+      margin: 20px 10px;
+    }
+  }
+  .panel{
+    flex-shrink: 0;
+    height: 50px;
+    position: relative;
+    background-color: rgba(0,0,0, .5);
+    button.close{
+      position: absolute;
+      height: 80%;
+      top: 10%;
+      width: 200px;
+      right: 20px;
+      background-color: #ffdd21;
+      border: transparent;
+      color: black;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+  .background{
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}

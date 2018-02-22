@@ -1,0 +1,19 @@
+<div class="gacha-test">
+  <div class="control">
+    <div class="input-wrapper">
+      <label for="config-type">选择一个配置的类别进行测试</label>
+      <select [(ngModel)]="current" id="config-type">
+        <option  [attr.value]="'standard'">标配补给</option>
+        <option  [attr.value]="'equipment'">装备补给</option>
+        <option  [attr.value]="'precision'">精准补给</option>
+      </select>
+    </div>
+    <div class="input-wrapper">
+      <label for="gacha-amount">执行抽取的次数</label>
+      <input id="gacha-amount" [(ngModel)]="times" />
+    </div>
+  </div>
+  <textarea [(ngModel)]="output">
+  </textarea>
+  <button (click)="start()">开始抽取</button>
+</div>

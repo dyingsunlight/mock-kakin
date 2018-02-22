@@ -1,0 +1,45 @@
+.start-exhibition{
+  position: relative;
+  margin: 0 auto;
+  filter: drop-shadow(1px 3px 5px gray);
+  .max-starts{
+    display: flex;
+    position: absolute;
+    width: auto;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    align-content: center;
+  }
+  .current-starts{
+    display: flex;
+    width: auto;
+    position: absolute;
+    align-content: center;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  .wrapper{
+    max-width: 50px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-right: -1px;
+    animation: starBound .3s forwards ease;
+    img{
+      width: 100%;
+    }
+  }
+}
+
+
+@keyframes starBound {
+  0% {
+    transform: scale(3);
+    opacity: .2;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

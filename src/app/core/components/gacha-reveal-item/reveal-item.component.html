@@ -1,0 +1,38 @@
+<div class="reveal-item" [ngClass]  ="item.type">
+  <div class="stage stage-1 "
+       (click)="nextStage(0)"
+       [ngClass]="{active: !isRevealed, 'boundAnimate': !isRevealed}">
+    <div class="content">
+      <img [src]="weaveFrameEffectImagePath"/>
+    </div>
+    <div class="weave-effect">
+      <img [src]="weaveEffectImagePath"/>
+    </div>
+    <div class="weave-effect">
+      <img [src]="weaveEffectImagePath"/>
+    </div>
+  </div>
+  <div class="stage stage-2" (click)="nextStage(1)" [ngClass]="{active: isRevealed, 'boundAnimate': isRevealed}">
+    <div class="content" [ngClass]  ="item.type">
+      <img [src]="item.image"/>
+    </div>
+    <div class="weave-effect">
+      <img [src]="weaveEffectImagePath"/>
+    </div>
+    <div class="detail">
+      <span class="title">
+        {{ item.name }}
+      </span>
+      <span class="comment">
+        {{ typeText[item.type] }}
+      </span>
+      <span class="stars">
+        <app-star-exhibition *ngIf="isRevealed"
+                             [current]="itemLevel"
+                             [max]="itemLevel">
+        </app-star-exhibition>
+      </span>
+    </div>
+  </div>
+</div>
+

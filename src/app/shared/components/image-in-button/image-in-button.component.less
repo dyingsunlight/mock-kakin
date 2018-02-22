@@ -1,0 +1,67 @@
+.gacha-card-indicator{
+  @height: 28px;
+  @width: 80px;
+  position: relative;
+  height: @height;
+  width: @width;
+  margin: 10px 0;
+  outline: none;
+
+  >img{
+    top: @height*0.3 / 2;
+    height: @height * 0.7;
+    left: 10px;
+    position: absolute;
+    z-index: 2;
+  }
+  >span{
+    display: block;
+    width: @width;
+    text-align: left;
+    padding-left: 40px;
+    font-size: 14px;
+    line-height: @height;
+    font-weight: 900;
+    color: white;
+  }
+  >div.mask{
+    position: absolute;
+    z-index: -1;
+    top: -1px;
+    bottom: 0;
+    width: 100%;
+    height: @height;
+    border-radius: 8.5px;
+    background-color: deepskyblue;
+    transform:skew(-15deg, 0);
+  }
+
+  &.active{
+    >span{
+      color: black;
+    }
+    >div.mask{
+      background-color: white;
+    }
+    .spark(){
+      position: absolute;
+      content: '';
+      width: 20px;
+      height: 20px;
+      background-image: url("/assets/images/icons/spark-effect.png");
+      background-repeat: no-repeat;
+      background-size: 20px;
+    }
+    &:before{
+      .spark();
+      background-size: 15px;
+      right: 10px;
+      bottom: -15px;
+    }
+    &:after{
+      .spark();
+      left: 20px;
+      top: -18px;
+    }
+  }
+}
