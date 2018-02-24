@@ -4,14 +4,21 @@ import { Injectable } from '@angular/core';
 export class LoadingService {
   isLoading = false;
   text = '';
+  subtext = '';
   constructor() {}
 
-  show(text = '') {
+  show(text = '', subtext = '') {
     this.isLoading = true;
     this.text = text;
+    this.subtext = subtext;
   }
   close() {
     this.isLoading = false;
     this.text = '';
+  }
+  update(text: string, subtext = '') {
+    this.text = text;
+    this.subtext = subtext;
+
   }
 }

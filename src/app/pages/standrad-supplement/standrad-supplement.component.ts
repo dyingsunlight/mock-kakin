@@ -63,12 +63,24 @@ export class StandradSupplementComponent implements OnInit {
     }
   }
   start(times: number) {
-    this.loading.show('加载资源中...');
-    this.preload.gacha(times , this.mode).subscribe(list => {
+    this.loading.show('加载资源中...', `0/${times * 4}`);
+    this.preload.gacha(times , this.mode, ({complete, total}) => this.loading.update('加载资源中...', `${complete}/${total}`))
+      .subscribe(list => {
       this.loading.close();
       this.currentList = list;
       this.reveal.show(this.currentList);
     });
   }
+  getList(times) {
+
+  }
+  cache(times, handle: Function) {
+
+    this.preload.gacha(times , this.mode).subscribe(list => {
+      this.currentList = list;
+      handle(this.currentList);
+    });
+  }
+
 }
 
