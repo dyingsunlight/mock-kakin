@@ -13,7 +13,7 @@ export class ImageInButtonComponent implements OnInit, OnChanges {
   @Input() width = 80;
 
   @Input() active = false;
-  @Input() basePath = url.imageBasePath;
+  @Input() basePath = url.icons;
   path = '';
   constructor() { }
 

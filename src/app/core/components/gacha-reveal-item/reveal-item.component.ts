@@ -28,7 +28,7 @@ export class GachaRevealItemComponent implements OnInit, OnDestroy, OnChanges {
   forceUpdateStar = 0;
   constructor() { }
   ngOnInit() {
-    this.weaveEffectImagePath = `${url.gachaBasePath}/effect/frame-weave.png`;
+    this.weaveEffectImagePath = `${url.gacha}/effect/frame-weave.png`;
   }
   ngOnChanges(changes: SimpleChanges) {
     if (changes.item) {
@@ -38,7 +38,7 @@ export class GachaRevealItemComponent implements OnInit, OnDestroy, OnChanges {
   }
   reloadItem(item: GachaItem) {
     // this.nextStage(0);
-    this.weaveFrameEffectImagePath = `${url.gachaBasePath}effect/${this.item.type}.png`;
+    this.weaveFrameEffectImagePath = `${url.gacha}effect/${this.item.type}.png`;
     clearTimeout(this.timerID);
     // this.timerID = setTimeout(this.nextStage.bind(this), 2000);
   }

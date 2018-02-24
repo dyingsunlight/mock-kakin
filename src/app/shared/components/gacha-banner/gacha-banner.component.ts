@@ -7,7 +7,7 @@ import { url } from '../../../config';
   styleUrls: ['./gacha-banner.component.less']
 })
 export class GachaBannerComponent implements OnInit, OnChanges {
-  @Input() basePath = url.imageBasePath;
+  @Input() basePath = url.icons;
   @Input() title = '';
   @Input() banner = '';
   @Input() text = '';

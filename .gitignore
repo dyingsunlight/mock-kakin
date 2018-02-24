@@ -43,7 +43,6 @@ testem.log
 Thumbs.db
 /raw-assets/
 gulpfile.js
-raw-assets/
 src/assets/images/
 src/assets/style/
 yarn-error.log

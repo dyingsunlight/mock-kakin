@@ -25,8 +25,8 @@ export class StarExhibitionComponent implements OnInit, OnChanges, OnDestroy {
   @Input() size = 25;
   @Input() animate = true;
   protected timerID: number;
-  emptyStarGraph = `${url.gachaBasePath}/effect/empty-star.png`;
-  starGraph = `${url.gachaBasePath}/effect/star.png`;
+  emptyStarGraph = `${url.gacha}/effect/empty-star.png`;
+  starGraph = `${url.gacha}/effect/star.png`;
   maxStarMap: number[] = [];
   currentStarMap: number[] = [];
   constructor() { }

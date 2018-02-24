@@ -7,7 +7,7 @@ import { url } from '../../../config';
   styleUrls: ['./gacha-type-selection.component.less']
 })
 export class GachaTypeSelectionComponent implements OnInit, OnChanges {
-  @Input() basePath = url.imageBasePath;
+  @Input() basePath = url.icons;
   @Input() bgName = '';
   @Input() textName = '';
   @Input() suffix = 'activated/inactivated';

@@ -9,7 +9,7 @@ export class GachaControlBoxComponent implements OnInit, OnChanges {
   @Input() text = '';
   @Input() tip = '';
   @Input() card = '';
-  @Input() basePath = url.imageBasePath;
+  @Input() basePath = url.icons;
   @Output() update = new EventEmitter<number>();
   cardPath = '';
   constructor() { }

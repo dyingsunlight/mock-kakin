@@ -27,7 +27,7 @@ export class GachaRevealComponent implements OnInit, OnChanges {
   }
   ngOnChanges(changes: SimpleChanges) {
     if (changes.bg) {
-      this.bg = `${url.basePath}/${this.bg}.png`;
+      this.bg = `${url.backgrounds}/${this.bg}.png`;
     }
   }
   nextItem(stage = 0) {

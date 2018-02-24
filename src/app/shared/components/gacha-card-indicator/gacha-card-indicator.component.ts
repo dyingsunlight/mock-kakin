@@ -8,7 +8,7 @@ import { url } from '../../../config';
 export class GachaCardIndicatorComponent implements OnInit, OnChanges {
   @Input() text = '';
   @Input() card = '';
-  @Input() basePath = url.imageBasePath;
+  @Input() basePath = url.icons;
   path = '';
   constructor() { }
 

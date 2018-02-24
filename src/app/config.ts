@@ -1,14 +1,12 @@
 import { environment } from '../environments/environment';
 
-let base = '/';
-
-if (environment.production) {
-  base = `/mock-kakin/`;
-}
-console.log(environment.production);
+const base = environment.production ? 'mock-kakin/' : '';
+const images = base + '/assets/images';
 export const url = {
-  base: base.slice(1),
-  basePath: base + 'assets/images/',
-  imageBasePath: base + 'assets/images/icons/',
-  gachaBasePath: base + 'assets/images/gacha/'
+  base: environment.production ? 'mock-kakin/' : '',
+  images: images,
+  backgrounds: images + '/backgrounds/',
+  icons: images + '/icons/',
+  gacha: images + '/gacha/'
 };
+
