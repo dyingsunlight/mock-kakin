@@ -1,0 +1,122 @@
+.icon-avatar{
+  background: url("./icons/avatar.png");
+}
+
+.icon-avatar-grey{
+  background: url("./icons/avatar-grey.png");
+}
+
+.icon-valkarja-activated{
+  background: url("./icons/valkyrja-activated.png");
+}
+
+.icon-valkarja-inactivated{
+  background: url("./icons/valkyrja-inactivated.png");
+}
+
+.icon-weapon{
+  background: url("./icons/weapon.png");
+}
+
+.icon-weapon-grey{
+  background: url("./icons/weapon-grey.png");
+}
+
+.icon-weapon-inactivated{
+  background: url("./icons/weapon-inactivated.png");
+}
+
+.icon-weapon-activated{
+  background: url("./icons/weapon-activated.png");
+}
+
+
+.icon-right-arrow{
+  &:after{
+    content: '';
+    background: url("./icons/arrow-right.png");
+  }
+}
+
+.icon-times-box{
+  background: url("./icons/times-box.png");
+}
+
+.icon-times-box-dot-base(){
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 5px;
+  top: 0;
+}
+
+.icon-one-time{
+  position: relative;
+  background: url("./icons/times-box.png");
+  background-size: 100% 100%;
+  &:before{
+    .icon-times-box-dot-base();
+    background: url("./icons/one-time-dot.png") no-repeat;
+    background-size: 100% 100%;
+    left: 5px;
+  }
+  &:after{
+  .icon-times-box-dot-base();
+    background: url("./icons/one-time-dot.png") no-repeat;
+    background-size: 100% 100%;
+    right: 5px;
+  }
+}
+
+.icon-ten-times{
+  position: relative;
+  background: url("./icons/times-box.png");
+  background-size: 100% 100%;
+  &:before{
+    .icon-times-box-dot-base();
+    background: url("./icons/ten-times-dot.png");
+    background-size: 100% 100%;
+    left: 5px;
+  }
+  &:after{
+    .icon-times-box-dot-base();
+    background: url("./icons/ten-times-dot.png");
+    background-size: 100% 100%;
+    right: 5px;
+  }
+}
+
+.icon-unknow-mark{
+  position: relative;
+  &:before{
+    content:'';
+    background: url("./icons/unknow-mark.png") no-repeat;
+    background-size: contain;
+  }
+}
+
+
+.icon-spark-effect{
+  position: relative;
+  .spark(){
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-image: url("./icons/spark-effect.png");
+    background-repeat: no-repeat;
+    background-size: 20px;
+  }
+  &:before{
+    .spark();
+    background-size: 15px;
+    right: 10px;
+    bottom: -15px;
+  }
+  &:after{
+    .spark();
+    left: 20px;
+    top: -18px;
+  }
+}
+
