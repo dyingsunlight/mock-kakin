@@ -1,7 +1,7 @@
 import { GachaItem } from '../../interface/gacha-item';
 import { weapon } from '../../resources/weapon-names';
 import { character } from '../../resources/character-names';
-import { equipment } from '../../resources/equipment';
+import { equipment } from '../../resources/equipment-names';
 import { stigmata } from '../../resources/stigmata-names';
 import { url } from '../../../config';
 
