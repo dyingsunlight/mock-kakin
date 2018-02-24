@@ -5,23 +5,20 @@ import { url } from './config';
 
 const routes: Routes = [
   {
-    path: url.base + '',
+    path: url.base,
     pathMatch: 'full',
-    redirectTo: url.base + PagesRouting[0].path
+    component: PagesRouting[0].component
   },
-  {
-    path: url.base + '',
-    children: PagesRouting,
-  },
+  ...PagesRouting,
   {
     path: '**',
-    redirectTo: url.base + PagesRouting[0].path
+    redirectTo: PagesRouting[0].path
   },
 ];
 
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }

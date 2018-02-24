@@ -1,7 +1,6 @@
 import {Component, OnInit, Input, Output, OnChanges, SimpleChanges, EventEmitter, OnDestroy} from '@angular/core';
 import { GachaItem } from '../../../gacha/interface/gacha-item';
 import { url } from '../../../config';
-import { getItemLevel } from '../../../gacha/library/item-level';
 
 const typeText = {
   'stigmata': '圣痕',
@@ -26,6 +25,7 @@ export class GachaRevealItemComponent implements OnInit, OnDestroy, OnChanges {
   itemLevel = 2;
   maxItemLevel = 3;
   forceUpdateStar = 0;
+  isImageLoading = false;
   constructor() { }
   ngOnInit() {
     this.weaveEffectImagePath = `${url.gacha}/effect/frame-weave.png`;
@@ -39,6 +39,7 @@ export class GachaRevealItemComponent implements OnInit, OnDestroy, OnChanges {
   reloadItem(item: GachaItem) {
     // this.nextStage(0);
     this.weaveFrameEffectImagePath = `${url.gacha}effect/${this.item.type}.png`;
+    this.isImageLoading = true;
     clearTimeout(this.timerID);
     // this.timerID = setTimeout(this.nextStage.bind(this), 2000);
   }
@@ -52,6 +53,9 @@ export class GachaRevealItemComponent implements OnInit, OnDestroy, OnChanges {
     this.itemLevel = this.item.level;
     this.maxItemLevel = this.itemLevel + 1;
     this.forceUpdateStar ++;
+  }
+  imageLoadComplete() {
+    this.isImageLoading = false;
   }
 }
 

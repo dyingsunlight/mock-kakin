@@ -52,3 +52,4 @@ export class OverviewItemsComponent implements OnInit, OnChanges, OnDestroy {
     this.close.emit();
   }
 }
+

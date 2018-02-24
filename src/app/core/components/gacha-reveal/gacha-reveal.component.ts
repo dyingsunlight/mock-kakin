@@ -2,7 +2,7 @@ import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/cor
 import { RevealService } from '../../service/reveal.service';
 import { url } from '../../../config';
 import { GachaItem } from '../../../gacha/interface/gacha-item';
-import { sortItems } from '../../../gacha/library/item-sort';
+import { sortItems } from '../../../gacha/library/util/item-sort';
 
 @Component({
   selector: 'app-gacha-reveal',
@@ -54,7 +54,7 @@ export class GachaRevealComponent implements OnInit, OnChanges {
     this.lastItemID = -1;
     this.loadNextItem();
   }
-  closeOvewview() {
+  closeOverview() {
     this.isOverviewActive = false;
   }
 }

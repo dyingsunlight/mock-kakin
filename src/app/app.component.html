@@ -4,23 +4,23 @@
   </p>
 </div>
 <app-gacha-reveal [bg]="'GachaBG'"></app-gacha-reveal>
-<div class="container img-GaChaBG">
-  <div class="top-navigation"></div>
+<div class="container">
+  <!--div class="top-navigation"></div-->
   <div class="page-body">
     <div class="left-content">
       <router-outlet></router-outlet>
     </div>
     <div class="right-navigation">
-      <app-image-in-button   [icon]="'HCoin'" link="standard/" [width]="100">
+      <app-image-in-button   [icon]="'HCoin'" link="./standard/" [width]="100">
         标配
       </app-image-in-button>
-      <app-image-in-button [icon]="'HCoin'" link="precision/" [width]="100">
+      <app-image-in-button [icon]="'HCoin'" link="./precision/" [width]="100">
         精准
       </app-image-in-button>
-      <app-image-in-button [icon]="'HCoin'" link="customize-config/" [width]="100">
+      <app-image-in-button [icon]="'HCoin'" link="./customize-config/" [width]="100">
         配置
       </app-image-in-button>
-      <app-image-in-button [icon]="'HCoin'" link="test/" [width]="100">
+      <app-image-in-button [icon]="'HCoin'" link="./test/" [width]="100">
         测试
       </app-image-in-button>
       <!--app-image-in-button [icon]="'HCoin'" link="/customize/" [width]="100">
@@ -32,3 +32,5 @@
     </div>
   </div>
 </div>
+<img class= "background" [src]="url.backgrounds + '/GachaBG.png'">
+<app-loading></app-loading>

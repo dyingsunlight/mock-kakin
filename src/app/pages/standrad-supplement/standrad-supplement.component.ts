@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router} from '@angular/router';
 import { GachaItem } from '../../gacha/interface/gacha-item';
 import { RevealService } from '../../core/service/reveal.service';
-import { startGaCha, getStatistics } from '../../gacha/index';
 import { PreloadService } from '../../core/service/preload.service';
+import { LoadingService } from '../../core/service/loading.service';
 
 interface UIConfig {
   banner: string;
@@ -40,13 +40,12 @@ export class StandradSupplementComponent implements OnInit {
   };
   mode: string;
   currentList: GachaItem[] = [];
-  preloadedList: GachaItem[] = [];
-  preloadLock = false;
   constructor(
     private route: ActivatedRoute,
     private reveal: RevealService,
     private router: Router,
-    private preload: PreloadService
+    private preload: PreloadService,
+    private loading: LoadingService
   ) { }
 
   ngOnInit() {
@@ -56,10 +55,17 @@ export class StandradSupplementComponent implements OnInit {
   }
   switchMode(mode: string) {
     // this.mode =  mode;
-    this.router.navigate(['./', {mode: mode === 'equipment' ? 'standard' : 'equipment'}]);
+    this.mode = mode === 'equipment' ? 'standard' : 'equipment';
+    try {
+      this.router.navigate(['./', {mode: this.mode}]);
+    } catch (err) {
+      console.log(err);
+    }
   }
   start(times: number) {
+    this.loading.show('加载资源中...');
     this.preload.gacha(times , this.mode).subscribe(list => {
+      this.loading.close();
       this.currentList = list;
       this.reveal.show(this.currentList);
     });

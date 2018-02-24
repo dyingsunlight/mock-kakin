@@ -1,3 +1,4 @@
+import { url } from './config';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -7,7 +8,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
+  url = url;
   constructor(
     public router: Router
-  ) {}
+  ) {
+  }
 }
+

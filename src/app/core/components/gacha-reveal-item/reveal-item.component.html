@@ -1,7 +1,7 @@
 <div class="reveal-item" [ngClass]  ="item.type">
   <div class="stage stage-1 "
        (click)="nextStage(0)"
-       [ngClass]="{active: !isRevealed, 'boundAnimate': !isRevealed}">
+       [ngClass]="{active: !isRevealed || isImageLoading, 'boundAnimate': !isRevealed}">
     <div class="content">
       <img [src]="weaveFrameEffectImagePath"/>
     </div>
@@ -12,9 +12,9 @@
       <img [src]="weaveEffectImagePath"/>
     </div>
   </div>
-  <div class="stage stage-2" (click)="nextStage(1)" [ngClass]="{active: isRevealed, 'boundAnimate': isRevealed}">
+  <div class="stage stage-2" (click)="nextStage(1)" [ngClass]="{active: isRevealed && !isImageLoading, 'boundAnimate': isRevealed && !isImageLoading}">
     <div class="content" [ngClass]  ="item.type">
-      <img [src]="item.image"/>
+      <img [src]="item.image" (load)="imageLoadComplete()"/>
     </div>
     <div class="weave-effect">
       <img [src]="weaveEffectImagePath"/>

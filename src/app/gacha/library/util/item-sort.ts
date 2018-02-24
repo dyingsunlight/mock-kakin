@@ -1,5 +1,4 @@
-import { GachaItem } from '../interface/gacha-item';
-import { getItemLevel } from './item-level';
+import { GachaItem } from '../../interface/gacha-item';
 
 const allTypes = ['character', 'weapon', 'stigmata', 'equipment', 'fragment'];
 /**

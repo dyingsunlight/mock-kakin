@@ -5,7 +5,7 @@ import { fragmentProcessor } from './prev-processor/fragment';
 import { noSameItemProcessor } from './prev-processor/no-same-item';
 import { extraOnlyProcessor } from './prev-processor/extra-item-only';
 import { africaCounterProcessor } from './prev-processor/africa-counter';
-import { getItemLevel } from './item-level';
+import { getItemLevel } from './util/item-level';
 import { iconAndImagePathAppend } from './prev-processor/image-icon-append';
 
 const extraItemProcessors = [

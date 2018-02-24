@@ -1,6 +1,6 @@
-import { stigmataLevel } from '../resources/item-level/stigmata';
-import { equipmentLevel } from '../resources/item-level/equipment';
-import { weapon } from '../resources/weapon-names';
+import { stigmataLevel } from '../../resources/item-level/stigmata';
+import { equipmentLevel } from '../../resources/item-level/equipment';
+import { weapon } from '../../resources/weapon-names';
 
 /**
  * 获取物品的等级
@@ -23,6 +23,7 @@ export const getItemLevel = function (name, type): number {
       return 4;
   }
 };
+
 
 function getLevel(res: object, name: string): number {
   for (const key of Object.keys(res)) {
