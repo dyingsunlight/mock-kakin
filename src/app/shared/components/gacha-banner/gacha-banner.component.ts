@@ -7,18 +7,17 @@ import { url } from '../../../config';
   styleUrls: ['./gacha-banner.component.less']
 })
 export class GachaBannerComponent implements OnInit, OnChanges {
-  @Input() basePath = url.icons;
   @Input() title = '';
   @Input() banner = '';
   @Input() text = '';
   constructor() { }
-  path = '';
-  imagePath = '';
+  titleImage = '';
+  bannerImage = '';
   ngOnInit() {
   }
   reloadAllParameters() {
-    this.path = `url(${this.basePath}${this.banner}.png)`;
-    this.imagePath = `${this.basePath}${this.title}.png`;
+    this.titleImage = `url(${url.icons}${this.title}.png)`;
+    this.bannerImage = `${url.backgrounds}${this.banner}.png`;
   }
   ngOnChanges(changes: SimpleChanges) {
     if (changes.title || changes.banner) {

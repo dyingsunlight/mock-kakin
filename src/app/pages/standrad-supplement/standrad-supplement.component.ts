@@ -22,7 +22,7 @@ interface UIConfig {
 export class StandradSupplementComponent implements OnInit {
   uiConfig: {[key: string]: UIConfig} = {
     standard: {
-      banner: 'GachaPic_1',
+      banner: 'GachaPic_banner_1',
       bannerText: '标配补给中不含灵魂觉醒角色(如圣仪装·今祥) 十回补给必定有A级或以上女武神降临，抽到重复女武神会自动分解为碎片。',
       bannerTitleImage: 'standard-supplement',
       cardStyle: 'standrad-card',
@@ -30,7 +30,7 @@ export class StandradSupplementComponent implements OnInit {
       itemDecoration: 'valkyrja-tip'
     },
     equipment: {
-      banner: 'GachaPic_2',
+      banner: 'GachaPic_banner_2',
       bannerText: '装备补给测试版。',
       bannerTitleImage: 'equipment-supplement',
       cardStyle: 'equipment-card',
