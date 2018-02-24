@@ -6,6 +6,8 @@
   width: @width;
   margin: 10px 0;
   outline: none;
+  user-select: none;
+  cursor: pointer;
 
   >img{
     top: @height*0.3 / 2;
@@ -23,6 +25,7 @@
     line-height: @height;
     font-weight: 900;
     color: white;
+    transition: .5s;
   }
   >div.mask{
     position: absolute;
@@ -34,8 +37,18 @@
     border-radius: 8.5px;
     background-color: deepskyblue;
     transform:skew(-15deg, 0);
+    transition: .5s;
+
   }
 
+  &:hover{
+    >div.mask{
+      background-color: whitesmoke;
+    }
+    >span{
+      color: black;
+    }
+  }
   &.active{
     >span{
       color: black;
