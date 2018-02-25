@@ -110,12 +110,22 @@
   (function(window, where) {
     window.preloader.preload(where, 1 ,function (params) {
       if (params.statistics.completed.length > params.statistics.total.length) {
-        document.querySelector('iframe').src = where
+        document.querySelector('iframe').src = where[0]
         document.querySelector('.loading').classList.add('hide')
       } else {
         document.querySelector('.progress').innerText = params.statistics.completed.length + '/' + params.statistics.total.length
       }
     })
-  })(window, './app-index.html')
+  })(window, [
+      './app-index.html',
+      './assets/images/backgrounds/GachaBG.png',
+      './assets/images/backgrounds/GachaPic_banner_1.png',
+      './assets/images/backgrounds/GachaPic_banner_2.png',
+      './assets/images/icons/standard-supplement.png',
+      './assets/images/icons/valkyrja-activated.png',
+      './assets/images/icons/valkyrja-inactivated.png',
+      './assets/images/icons/weapon-activated.png',
+      './assets/images/icons/weapon-inactivated.png',
+    ])
 </script>
 </html>
