@@ -109,7 +109,7 @@
 <script>
   (function(window, where) {
     window.preloader.preload(where, 1 ,function (params) {
-      if (params.statistics.completed.length > params.statistics.total.length) {
+      if (params.statistics.completed.length >= params.statistics.total.length) {
         document.querySelector('iframe').src = where[0]
         document.querySelector('.loading').classList.add('hide')
       } else {
