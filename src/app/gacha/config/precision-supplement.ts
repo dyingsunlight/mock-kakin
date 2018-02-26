@@ -1,15 +1,17 @@
 import {Possibility} from '../interface/possibility';
 
-// factor 抽取在当前层所占的比重
-// type 取得最近的一层的type信息， 将会当成附件信息原样返回
-// 每个级别分开抽取 类别（角色卡、材料等） =》　细节（物品等级）＝》　物品
+// 18.2.26 更新，
+// 根据实际测试的结果以及 崩坏3情报室发布的概率信息来看
+// 游戏内实际的抽取概率大致只有公示概率的 1/4， 因此乘上此因子数
+
+const factor = 0.25;
 export const precisionSupplementPossibility: Possibility = {
   name: '精准补给蛋池配置',
   factor: 1,
   possibility: [
     {
       name: 'up的4星圣痕',
-      factor: 3720,
+      factor: 3720 * factor,
       type: 'stigmata',
       contents: [
         '德古拉'
@@ -17,7 +19,7 @@ export const precisionSupplementPossibility: Possibility = {
     },
     {
       name: '非up的4星圣痕',
-      factor: 3717,
+      factor: 3717 * factor,
       type: 'stigmata',
       contents: [
         '奥托', '女娲', '姬轩辕', '板鸭黯影'
@@ -40,7 +42,7 @@ export const precisionSupplementPossibility: Possibility = {
     },
     {
       name: 'up的4星武器',
-      factor: 2749,
+      factor: 2749 * factor,
       type: 'weapon',
       contents: [
         '索尔之锤'

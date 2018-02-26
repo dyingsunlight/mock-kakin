@@ -1,0 +1,54 @@
+<div class="about">
+  <div class="section">
+    <span class="title">关于概率</span>
+    <span>
+      经过测试(右边那个->) 进行大量的自动化抽取，表明基本上是和游戏内公布的概率是一致的。
+      但请注意，此应用作为用于测试概率的作品，对比游戏内部的实际概率必定存在差异，务必不要以模拟器的结果作为标准，。
+    </span>
+  </div>
+  <div class="section">
+    <span class="title">关于自定义蛋池的配置语法</span>
+    <span>
+      每个蛋池的配置都有这几项组成 (* 代表必选)：
+    </span>
+    <ul>
+      <li>
+        name: 名称。name字段参与任何操作，仅用来标识内容, 提高可读性。
+      </li>
+      <li>
+        * factor: 抽取因子。抽取因子决定了它的内容被抽取的概率。概率 = (抽取因子 / 当前层级 因子总和)。
+      </li>
+      <li>
+        possibility: 层级。每次抽取都是从当前层级内，根据每个子项定义的抽取因子的比例作为概率进行抽取。
+        当 possibility 存在时，将会自动忽略 contents 字段。
+      </li>
+      <li>
+        contents: 实际的物品内容。所有可用的物品名称可以在<a
+        href="https://github.com/dyingsunlight/mock-kakin/tree/master/src/app/gacha/resources" target="_blank">这里找到</a>。
+        包含了游戏内所有的圣痕、武器、角色卡和角色碎片。
+      </li>
+      <li>
+        type : 仅在contents有效时使用。用于决定该查找抽取结果的资源文件，以及一系列的预处理器的使用等。
+      </li>
+    </ul>
+    <span>
+      具体的案例可以在这里<a href="https://github.com/dyingsunlight/mock-kakin/tree/master/src/app/gacha/config" target="_blank">
+        进行查看
+      </a>，内有更详细的注释。
+    </span>
+  </div>
+  <div class="section">
+    <span class="title">关于此应用</span>
+    <span>
+      Mock-Kakin 氪金模拟器由基于 Angular 5 开发而成，使用MIT开源协议。<br />
+      完整的源代码可以在
+      <a href="https://github.com/dyingsunlight/mock-kakin" target="_blank">Github</a>
+      找到。
+    </span>
+
+  </div>
+  <div class="section">
+    <span class="title"></span>
+    <span class="author">By Dogfish</span>
+  </div>
+</div>

@@ -1,15 +1,17 @@
 import {Possibility} from '../interface/possibility';
 
-// factor 抽取在当前层所占的比重
-// type 取得最近的一层的type信息， 将会当成附件信息原样返回
-// 每个级别分开抽取 类别（角色卡、材料等） =》　细节（物品等级）＝》　物品
+// 18.2.26 更新，
+// 根据实际测试的结果以及 崩坏3情报室发布的概率信息来看
+// 游戏内实际的抽取概率大致只有公示概率的 1/4， 因此乘上此因子数
+
+const factor = 0.25;
 export const standardSupplementPossibility: Possibility = {
   name: '标配补给蛋池配置',
   factor: 1,
   possibility: [
     {
       name: 's角色卡',
-      factor: 150,
+      factor: 150 * factor,
       type: 'character',
       contents: [
         '月光', '鬼凯', '次元',
@@ -19,7 +21,7 @@ export const standardSupplementPossibility: Possibility = {
     },
     {
       name: 'a级女武神',
-      factor: 1350,
+      factor: 1350 * factor,
       type: 'character',
       contents: [
         '游侠', '圣女', '影舞',
@@ -30,7 +32,7 @@ export const standardSupplementPossibility: Possibility = {
     },
     {
       name: 'b级女武神',
-      factor: 550,
+      factor: 550 * factor,
       type: 'character',
       contents: [
         '疾风', '白练', '绯红', '战车',
@@ -59,7 +61,7 @@ export const standardSupplementPossibility: Possibility = {
     },
     {
       name: '4星圣痕',
-      factor: 73,
+      factor: 73 * factor,
       type: 'stigmata',
       contents: [
         '埃及艳后', '姬轩辕',
@@ -79,7 +81,7 @@ export const standardSupplementPossibility: Possibility = {
     },
     {
       name: '4星武器',
-      factor: 46,
+      factor: 46 * factor,
       type: 'weapon',
       contents: ['圣遗物2nd', '索尔之锤', '超电磁炮', '能量跃迁者', '圣遗物3rd', '雷切',
         '磁暴', '鲜血之舞', '虚无之刃',  '圣遗物5th', '百手巨人初型',  '尼德霍格翼爪', '蚩尤巨炮', '日炎大剑', '极光斩舰刀'

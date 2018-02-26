@@ -4,18 +4,18 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { StandradSupplementComponent } from './standrad-supplement/standrad-supplement.component';
-import { CustomizeSupplementComponent } from './customize-supplement/customize-supplement.component';
 import { CustomizeConfigComponent } from './customize-config/customize-config.component';
 import { GachaTestComponent } from './gacha-test/gacha-test.component';
 import { PrecisionSupplementComponent } from './precision-supplement/precision-supplement.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     StandradSupplementComponent,
-    CustomizeSupplementComponent,
     CustomizeConfigComponent,
     GachaTestComponent,
-    PrecisionSupplementComponent
+    PrecisionSupplementComponent,
+    AboutComponent
   ],
   imports: [
     RouterModule,
