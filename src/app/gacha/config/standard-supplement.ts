@@ -4,14 +4,14 @@ import {Possibility} from '../interface/possibility';
 // 根据实际测试的结果以及 崩坏3情报室发布的概率信息来看
 // 游戏内实际的抽取概率大致只有公示概率的 1/4， 因此乘上此因子数
 
-const factor = 0.25;
+const factor = 0.18;
 export const standardSupplementPossibility: Possibility = {
   name: '标配补给蛋池配置',
   factor: 1,
   possibility: [
     {
       name: 's角色卡',
-      factor: 150 * factor,
+      factor: 150 * factor * 0.6,
       type: 'character',
       contents: [
         '月光', '鬼凯', '次元',
@@ -32,7 +32,7 @@ export const standardSupplementPossibility: Possibility = {
     },
     {
       name: 'b级女武神',
-      factor: 550 * factor,
+      factor: 550 * factor * 0.8,
       type: 'character',
       contents: [
         '疾风', '白练', '绯红', '战车',
@@ -40,7 +40,7 @@ export const standardSupplementPossibility: Possibility = {
     },
     {
       name: 's女武神碎片',
-      factor: 127,
+      factor: 127 * factor,
       type: 'fragment',
       contents: [
         '月光', '鬼凯', '次元',

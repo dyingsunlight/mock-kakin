@@ -8,6 +8,7 @@ import { ImageInButtonComponent } from './components/image-in-button/image-in-bu
 import { StarExhibitionComponent } from './components/star-exhibition/star-exhibition.component';
 import { RouterModule } from '@angular/router';
 import { CharacterRankExhibitionComponent } from './components/character-rank-exhibition/character-rank-exhibition.component';
+import { StigmataIndicatorComponent } from './components/stigmata-indicator/stigmata-indicator.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { CharacterRankExhibitionComponent } from './components/character-rank-ex
   ImageInButtonComponent,
   StarExhibitionComponent,
   CharacterRankExhibitionComponent,
+  StigmataIndicatorComponent,
 
   ],
   imports: [
@@ -31,7 +33,8 @@ import { CharacterRankExhibitionComponent } from './components/character-rank-ex
     GachaCardIndicatorComponent,
     ImageInButtonComponent,
     StarExhibitionComponent,
-    CharacterRankExhibitionComponent
+    CharacterRankExhibitionComponent,
+    StigmataIndicatorComponent
   ],
   providers: [],
   bootstrap: []
