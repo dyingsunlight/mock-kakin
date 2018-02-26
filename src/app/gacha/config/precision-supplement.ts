@@ -50,7 +50,7 @@ export const precisionSupplementPossibility: Possibility = {
     },
     {
       name: '非up的4星武器',
-      factor: 2749,
+      factor: 2749 * factor,
       type: 'weapon',
       contents: [
         '圣遗物2nd', '藏锋', '火刀真田', '巴鲁蒙格',
