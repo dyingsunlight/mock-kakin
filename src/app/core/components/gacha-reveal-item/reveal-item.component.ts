@@ -39,7 +39,7 @@ export class GachaRevealItemComponent implements OnInit, OnDestroy, OnChanges {
   reloadItem(item: GachaItem) {
     // this.nextStage(0);
     this.weaveFrameEffectImagePath = `${url.gacha}effect/${this.item.type}.png`;
-    this.isImageLoading = true;
+    // this.isImageLoading = true;
     clearTimeout(this.timerID);
     // this.timerID = setTimeout(this.nextStage.bind(this), 2000);
   }

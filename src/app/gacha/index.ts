@@ -29,8 +29,10 @@ export const startGaCha = function (times = 1, mode = 'standard', protection = t
 export const getStatistics = function (times: number, mode = 'standard') {
   const statics = {};
   const category = {};
-  for (let i = 0; i < times / 10; i++) {
+  let total = 0;
+  for (let i = 0; i < times; i++) {
     const items = startGaCha(10, mode);
+    total += items.length;
     for (const item of items) {
       if (statics.hasOwnProperty(item.name)) {
         statics[item.name]++;
@@ -50,13 +52,13 @@ export const getStatistics = function (times: number, mode = 'standard') {
   }
   const output = {};
   for (const key of Object.keys(statics)) {
-    output[key] = String((statics[key] / times * 100).toFixed(3)) + '%';
+    output[key] = String((statics[key] / total * 100).toFixed(3)) + '%';
   }
   for (const key of Object.keys(category)) {
     for (const level of Object.keys((category[key]))) {
-      category[key][level] = String((category[key][level] / times * 100).toFixed(3)) + '%';
+      category[key][level] = (category[key][level] / total * 100).toFixed(3) + '%';
     }
   }
-  return {times: times, category, detail: statics };
+  return {times: total, category, detail: statics };
 };
 

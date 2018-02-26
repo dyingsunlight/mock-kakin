@@ -3,6 +3,7 @@ import { standardSupplementPossibility } from '../../gacha/config/standard-suppl
 import { equipmentSupplementPossibility } from '../../gacha/config/equipment-supplement';
 import { precisionSupplementPossibility } from '../../gacha/config/precision-supplement';
 import { prettyPrint } from '../../core/library/json-pretty';
+import {Possibility} from '../../gacha/interface/possibility';
 
 const deepClone = function (from: {[key: string]: any}, to: {[key: string]: any} = {}, overwrite = true) {
   for (const key of Object.keys(from)) {
@@ -49,9 +50,15 @@ export class CustomizeConfigComponent implements OnInit {
     this.text = prettyPrint(this.config[name], ' ');
   }
   confirm() {
-    // standardSupplementPossibility.factor = 890
-    // this.config[this.current] = JSON.parse(this.text);
-    deepClone(JSON.parse(this.text), standardSupplementPossibility, true);
-    console.log(standardSupplementPossibility);
+    deepClone(JSON.parse(this.text), this.config[this.current], true);
+  }
+  showPossibility() {
+    // 只统计第二级的
+    const p: Possibility[] = this.config[this.current].possibility;
+    const report: {[key: string]: string} = {};
+    const total = p.reduce( (prev, item) => item.factor + prev, 0);
+    p.forEach( item => report[item.name] = (item.factor / total * 100).toFixed(2) + '%');
+    alert(prettyPrint(report, ' '));
   }
 }
+

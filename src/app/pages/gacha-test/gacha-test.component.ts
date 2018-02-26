@@ -3,14 +3,21 @@ import { getStatistics } from '../../gacha/index';
 import { prettyPrint } from '../../core/library/json-pretty';
 
 const translateDictionary = {
-  'times': '总次数',
+  'times': '实际抽取物品数量',
   'stigmata': '圣痕',
   'weapon': '武器',
   'character': '角色',
   'fragment': '角色碎片',
   'equipment': '装备/经验',
-  'category': '类别分布（数字为星级）',
-  'detail': '具体分布物品'
+  'category': '按照分类',
+  'detail': '按照物品',
+  '"1"': '1星',
+  '"2"': '2星',
+  '"4"': '初始4星',
+  '"3"': '初始3星',
+  '"11"': 'B级角色卡',
+  '"12"': 'A级角色卡',
+  '"13"': 'S级角色卡',
 }
 @Component({
   selector: 'app-gacha-test',
