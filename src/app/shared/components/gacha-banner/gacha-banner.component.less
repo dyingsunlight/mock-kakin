@@ -39,8 +39,8 @@
     top: 0;
     z-index: -1;
     transition: .5s;
-    animation: zoomIn 10s forwards;
-    transition-timing-function: ease;
+    animation: zoomIn 5s forwards;
+    transition-timing-function: ease-out;
   }
   &:active{
     >img{
@@ -49,9 +49,9 @@
   }
   @keyframes zoomIn{
     0%{
-      left: -10%;
-      top: -10%;
-      width: 110%;
+      left: -8%;
+      top: -8%;
+      width: 116%;
     }
     100%{
       width: 100%;

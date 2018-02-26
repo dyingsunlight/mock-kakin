@@ -12,13 +12,12 @@
   z-index: @zInRotationTip;
 }
 
-@media screen {
-  @media (max-width:@minScreenWidth){
-    .screen-rotation-tip{
-      display: flex;
-    }
+@media screen and (orientation: portrait) and (max-width: 600px){
+  .screen-rotation-tip{
+    display: flex;
   }
 }
+
 .container{
   position: fixed;
   left: 0;
