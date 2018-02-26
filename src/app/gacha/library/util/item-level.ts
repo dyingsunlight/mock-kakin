@@ -1,5 +1,6 @@
 import { stigmataLevel } from '../../resources/item-level/stigmata';
 import { equipmentLevel } from '../../resources/item-level/equipment';
+import { characterLevel } from '../../resources/item-level/character';
 import { weapon } from '../../resources/weapon-names';
 
 /**
@@ -18,7 +19,7 @@ export const getItemLevel = function (name, type): number {
       const weaponName = weapon[name];
       return weaponName ? +weaponName.slice(-1) : 1 ;
     case 'character':
-      return 4;
+      return getLevel(characterLevel, name);
     case 'fragment':
       return 4;
   }

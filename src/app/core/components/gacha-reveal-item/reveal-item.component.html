@@ -26,11 +26,12 @@
       <span class="comment">
         {{ typeText[item.type] }}
       </span>
-      <span class="stars">
-        <app-star-exhibition *ngIf="isRevealed"
+      <span class="rank">
+        <app-star-exhibition *ngIf="isRevealed && itemLevel <= 10"
                              [current]="itemLevel"
                              [max]="itemLevel">
         </app-star-exhibition>
+        <app-character-rank-exhibition *ngIf="isRevealed && itemLevel > 10" [current]="itemLevel"></app-character-rank-exhibition>
       </span>
     </div>
   </div>

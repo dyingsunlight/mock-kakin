@@ -46,3 +46,4 @@ gulpfile.js
 yarn-error.log
 yarn.lock
 
+!/src/assets/

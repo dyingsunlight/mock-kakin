@@ -46,13 +46,13 @@
       .weave-effect {
         &:first-child {
           img {
-            animation: weaveEffect 1.5s infinite ease;
+            animation: revealWeaveEffect 1.5s infinite ease;
             animation-delay: 1.2s;
           }
         }
         &:last-child {
           img {
-            animation: weaveEffect 1.5s infinite ease;
+            animation: revealWeaveEffect 1.5s infinite ease;
             animation-delay: .3s;
           }
         }
@@ -91,7 +91,7 @@
         font-weight: 500;
         font-size: .8rem;
       }
-      span.stars{
+      span.rank{
         display: block;
       }
     }
@@ -127,9 +127,10 @@
   }
 }
 .boundAnimate {
-  animation: boundIn .3s forwards ease;
+  animation: revealAnimation .3s forwards ease;
 }
-@keyframes boundIn {
+
+@keyframes revealAnimation {
   0% {
     transform: scale(.2) translateY(10px) translateZ(-100px) translateX(10px);
     opacity: .01;
@@ -139,8 +140,7 @@
     opacity: 1;
   }
 }
-
-@keyframes weaveEffect {
+@keyframes revealWeaveEffect {
   0% {
     transform: scale(0.01);
     opacity: .9;
@@ -150,30 +150,6 @@
     opacity: 1;
   }
   100% {
-    opacity: 0;
-  }
-}
-
-@keyframes frameGlowEffect {
-  0% {
-    filter: drop-shadow(0px 0px 30px deepskyblue);
-  }
-  100% {
-    filter: drop-shadow(0px 0px 30px deepskyblue);
-  }
-}
-
-@keyframes itemGlowEffect {
-  0% {
-    transform: scale(0.01);
-    opacity: .3;
-  }
-  60% {
-    transform: scale(2);
-    opacity: .9;
-  }
-  100% {
-    transform: scale(0.3);
     opacity: 0;
   }
 }

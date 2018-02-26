@@ -9,13 +9,13 @@ const allTypes = ['character', 'weapon', 'stigmata', 'equipment', 'fragment'];
  */
 export const sortItems = function (items: GachaItem[], sortBy = allTypes) {
   allTypes.forEach(val => !sortBy.includes(val) && sortBy.push(val));
-  let level = 4;
+  let maxLevel = 15;
   let output = [];
-  while (level > 0) {
+  while (maxLevel > 0) {
     for (const type of sortBy) {
-      output = output.concat(items.filter(item => item.type === type && item.level === level));
+      output = output.concat(items.filter(item => item.type === type && item.level === maxLevel));
     }
-    level --;
+    maxLevel --;
   }
   return output;
 };

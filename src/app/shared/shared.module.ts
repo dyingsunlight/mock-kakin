@@ -7,6 +7,7 @@ import { GachaCardIndicatorComponent } from './components/gacha-card-indicator/g
 import { ImageInButtonComponent } from './components/image-in-button/image-in-button.component';
 import { StarExhibitionComponent } from './components/star-exhibition/star-exhibition.component';
 import { RouterModule } from '@angular/router';
+import { CharacterRankExhibitionComponent } from './components/character-rank-exhibition/character-rank-exhibition.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { RouterModule } from '@angular/router';
   GachaCardIndicatorComponent,
   ImageInButtonComponent,
   StarExhibitionComponent,
+  CharacterRankExhibitionComponent,
 
   ],
   imports: [
@@ -28,7 +30,8 @@ import { RouterModule } from '@angular/router';
     GachaControlBoxComponent,
     GachaCardIndicatorComponent,
     ImageInButtonComponent,
-    StarExhibitionComponent
+    StarExhibitionComponent,
+    CharacterRankExhibitionComponent
   ],
   providers: [],
   bootstrap: []

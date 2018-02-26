@@ -1,0 +1,31 @@
+.character-rank-exhibition{
+  position: relative;
+  display: block;
+  .wrapper {
+    text-align: center;
+    width: 40px;
+    left: 50%;
+    margin-left: -20px;
+    position: absolute;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+
+.enable-animate{
+  animation: rankAnimate .3s forwards ease;
+}
+
+@keyframes rankAnimate {
+  0% {
+    transform: scale(3);
+    opacity: .2;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
