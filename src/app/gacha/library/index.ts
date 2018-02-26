@@ -1,16 +1,28 @@
 import {Possibility} from '../interface/possibility';
 import {GachaItem} from '../interface/gacha-item';
+import { GachaExecutorParams } from '../interface/gacha-executor';
 import { prevProcessing } from './prev-processing';
+import { getItemLevel } from './util/item-level';
+import { GachaPreProcessParams } from '../interface/gacha-pre-process';
 
-
-export const gachaExecutor = function (config: Possibility, times = 1, extra = false): GachaItem[] {
+export const gachaExecutor = function (params: GachaExecutorParams): GachaItem[] {
   const output: GachaItem[] = [];
-  for (let i = 0; i < times * 2; i++) {
-    const {name, type} = executor([config]);
-    // 偶数抽取的为副产物，不能出货
-    const isExtraItem = i % 2 === 0;
-    const item = prevProcessing(name, type, i, isExtraItem);
-    // 如果处理器判断此条目无法使用，则忽略并且再次抓取新条目
+  for (let i = 0; i < params.times * 2; i++) {
+    const {name, type} = executor([params.possible]);
+    // 初步生成物品名称和文件名
+    let item: GachaItem = {
+      name: name,
+      type: type,
+      level: getItemLevel(name, type)
+    };
+    // 生成预处理器执行参数并执行
+    const preParams: GachaPreProcessParams = {
+      index: i,
+      item,
+      controlParams: params
+    };
+    item = prevProcessing(preParams);
+    // 如果预处理器判断此条目无法使用，则忽略并且再次抓取新条目
     if (!item) {
       i--;
       continue;

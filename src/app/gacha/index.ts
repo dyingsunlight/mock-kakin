@@ -1,19 +1,31 @@
 import { gachaExecutor } from './library/index';
+import { GachaExecutorParams } from './interface/gacha-executor';
 import { standardSupplementPossibility } from './config/standard-supplement';
 import { equipmentSupplementPossibility } from './config/equipment-supplement';
 import { precisionSupplementPossibility } from './config/precision-supplement';
 
-export const startGaCha = function (times = 1, mode = 'standard') {
-  switch (mode) {
-    case 'equipment':
-      return gachaExecutor(equipmentSupplementPossibility, times, true);
-    case 'precision':
-      return gachaExecutor(precisionSupplementPossibility, times, true);
-    default:
-      return gachaExecutor(standardSupplementPossibility, times, true);
-  }
+const possibleList = {
+  standard: standardSupplementPossibility,
+  equipment: equipmentSupplementPossibility,
+  precision: precisionSupplementPossibility,
 };
 
+export const startGaCha = function (times = 1, mode = 'standard', protection = true) {
+  const params: GachaExecutorParams = {
+    mode,
+    times,
+    possible: possibleList[mode] ? possibleList[mode] : possibleList.standard,
+    disableProtection: protection === false
+  };
+  return gachaExecutor(params);
+};
+
+/**
+ * 获取统计信息，用于批量抽取测试
+ * @param {number} times
+ * @param {string} mode
+ * @returns {{times: number, category: {}, detail: {}}}
+ */
 export const getStatistics = function (times: number, mode = 'standard') {
   const statics = {};
   const category = {};
@@ -45,6 +57,6 @@ export const getStatistics = function (times: number, mode = 'standard') {
       category[key][level] = String((category[key][level] / times * 100).toFixed(3)) + '%';
     }
   }
-  return {times: times, category, detail: statics, };
+  return {times: times, category, detail: statics };
 };
 

@@ -1,7 +1,9 @@
 import { url } from '../../../config';
 import { GachaItem } from '../../interface/gacha-item';
+import { GachaPreProcessParams } from '../../interface/gacha-pre-process';
 
-export const iconAndImagePathAppend = function (item: GachaItem, index: number) {
+export const iconAndImagePathAppend = function (params: GachaPreProcessParams) {
+  const item = params.item;
   switch (item.type) {
     case 'weapon':
       // weapon 没有icon。。。直接用原图作为缩略图

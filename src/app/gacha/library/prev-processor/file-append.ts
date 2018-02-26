@@ -4,6 +4,7 @@ import { character } from '../../resources/character-names';
 import { equipment } from '../../resources/equipment-names';
 import { stigmata } from '../../resources/stigmata-names';
 import { url } from '../../../config';
+import { GachaPreProcessParams } from '../../interface/gacha-pre-process';
 
 const dict = {
   character,
@@ -12,7 +13,8 @@ const dict = {
   weapon
 };
 
-export const filePathAppend = function (item: GachaItem, index: number) {
+export const filePathAppend = function (params: GachaPreProcessParams) {
+  const item = params.item;
   item.file =  dict[item.type] ? dict[item.type][item.name] : undefined;
   switch (item.type) {
     case 'weapon':
