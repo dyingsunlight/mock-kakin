@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Kakin-Emulator</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<script src="./preloader.min.js"></script>
+<body>
+<div class="loading">
+    <div class="text">
+        <span class="tip">加载资源中... </span>
+        <span class="progress"></span>
+        <div class="spinner">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+        </div>
+    </div>
+</div>
+<iframe>
+
+</iframe>
+</body>
+<style>
+    .loading{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        background-color: whitesmoke;
+    }
+    .loading.hide{
+        display: none;
+    }
+    .text{
+        width: 100%;
+        height: 3rem;
+        top: 60%;
+        margin-top: -3rem;
+        text-align: center;
+        display: block;
+        position: absolute;
+    }
+    .text span{
+        display: block;
+    }
+    body,html{
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+    }
+    iframe{
+        height: 100%;
+        width: 100%;
+        border: none;
+    }
+
+    .spinner {
+        width: 50px;
+        height: 50px;
+        left: 50%;
+        top: -50px;
+        margin-top: -25px;
+        margin-left: -25px;
+        position: absolute;
+        -webkit-animation: sk-rotate 2.0s infinite linear;
+        animation: sk-rotate 2.0s infinite linear;
+    }
+    .dot1, .dot2 {
+        width: 60%;
+        height: 60%;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        background-color: #333;
+        border-radius: 100%;
+
+        -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+        animation: sk-bounce 2.0s infinite ease-in-out;
+    }
+
+    .dot2 {
+        top: auto;
+        bottom: 0;
+        -webkit-animation-delay: -1.0s;
+        animation-delay: -1.0s;
+    }
+
+    @-webkit-keyframes sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
+    @keyframes sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+
+    @-webkit-keyframes sk-bounce {
+        0%, 100% { -webkit-transform: scale(0.0) }
+        50% { -webkit-transform: scale(1.0) }
+    }
+
+    @keyframes sk-bounce {
+        0%, 100% {
+            transform: scale(0.0);
+            -webkit-transform: scale(0.0);
+        } 50% {
+              transform: scale(1.0);
+              -webkit-transform: scale(1.0);
+          }
+    }
+</style>
+<script>
+  (function(window, where) {
+    window.preloader.preload(where, 1 ,function (params) {
+      if (params.statistics.completed.length >= params.statistics.total.length) {
+        document.querySelector('iframe').src = where[0]
+        document.querySelector('.loading').classList.add('hide')
+      } else {
+        document.querySelector('.progress').innerText = params.statistics.completed.length + '/' + params.statistics.total.length
+      }
+    })
+  })(window, [
+      './app-index.html',
+      './mock-kakin/assets/images/backgrounds/GachaBG.png',
+      './mock-kakin/assets/images/backgrounds/GachaPic_banner_1.png',
+      './mock-kakin/assets/images/backgrounds/GachaPic_banner_2.png',
+      './mock-kakin/assets/images/icons/standard-supplement.png',
+      './mock-kakin/assets/images/icons/valkyrja-activated.png',
+      './mock-kakin/assets/images/icons/valkyrja-inactivated.png',
+      './mock-kakin/assets/images/icons/weapon-activated.png',
+      './mock-kakin/assets/images/icons/weapon-inactivated.png',
+    ])
+</script>
+</html>
