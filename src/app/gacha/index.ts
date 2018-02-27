@@ -1,4 +1,4 @@
-import { gachaExecutor } from './library/index';
+import { withAppendant, withoutAppendant} from './library/index';
 import { GachaExecutorParams } from './interface/gacha-executor';
 import { standardSupplementPossibility } from './config/standard-supplement';
 import { equipmentSupplementPossibility } from './config/equipment-supplement';
@@ -10,14 +10,26 @@ const possibleList = {
   precision: precisionSupplementPossibility,
 };
 
-export const startGaCha = function (times = 1, mode = 'standard', protection = true) {
+export const gachaWithAppendant = function (times = 1, mode = 'standard', protection = true) {
   const params: GachaExecutorParams = {
     mode,
     times,
     possible: possibleList[mode] ? possibleList[mode] : possibleList.standard,
-    disableProtection: protection === false
+    disableProtection: protection === false,
+    disableAppendant: false
   };
-  return gachaExecutor(params);
+  return withAppendant(params);
+};
+
+export const gachaWithoutAppendant = function (times = 1, mode = 'standard', protection = true) {
+  const params: GachaExecutorParams = {
+    mode,
+    times,
+    possible: possibleList[mode] ? possibleList[mode] : possibleList.standard,
+    disableProtection: protection === false,
+    disableAppendant: true
+  };
+  return withoutAppendant(params);
 };
 
 /**
@@ -26,12 +38,12 @@ export const startGaCha = function (times = 1, mode = 'standard', protection = t
  * @param {string} mode
  * @returns {{times: number, category: {}, detail: {}}}
  */
-export const getStatistics = function (times: number, mode = 'standard') {
+export const getStatistics = function (times: number, mode = 'standard', protection = true) {
   const statics = {};
   const category = {};
   let total = 0;
   for (let i = 0; i < times; i++) {
-    const items = startGaCha(10, mode);
+    const items = gachaWithoutAppendant(10, mode, protection);
     total += items.length;
     for (const item of items) {
       if (statics.hasOwnProperty(item.name)) {

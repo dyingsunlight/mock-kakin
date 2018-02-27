@@ -58,7 +58,7 @@ export class CustomizeConfigComponent implements OnInit {
     const report: {[key: string]: string} = {};
     const total = p.reduce( (prev, item) => item.factor + prev, 0);
     p.forEach( item => report[item.name] = (item.factor / total * 100).toFixed(2) + '%');
-    alert(prettyPrint(report, ' '));
+    alert('以下为单抽概率，不包含保底\r' + prettyPrint(report, ' '));
   }
 }
 

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { GachaItem } from '../../gacha/interface/gacha-item';
-import { startGaCha } from '../../gacha/index';
+import { gachaWithAppendant } from '../../gacha/index';
 import { HttpClient } from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/retry';
@@ -9,17 +9,19 @@ import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Cache } from '../library/cache';
+import { StateService } from './state.service';
 
 @Injectable()
 export class PreloadService {
   constructor(
-    protected http: HttpClient
+    protected http: HttpClient,
+    protected state: StateService
   ) {
   }
   cache = new Cache();
 
   gacha(times: number, type: string, onUpdate ?: Function): Observable<GachaItem[]> {
-    const list: GachaItem[] = startGaCha(times, type);
+    const list: GachaItem[] = gachaWithAppendant(times, type, this.state.enableProtection);
     return Observable.create(observer => {
       this.waitForPreload(list, onUpdate).subscribe(res => {
         this.cache.setHistory(list);

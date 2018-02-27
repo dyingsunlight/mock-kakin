@@ -1,6 +1,6 @@
 import { url } from './config';
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { StateService } from './core/service/state.service';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +10,10 @@ import { Router } from '@angular/router';
 export class AppComponent {
   url = url;
   constructor(
-    public router: Router
-  ) {
+    public state: StateService
+  ) {}
+  updateProtection(status: boolean) {
+    this.state.enableProtection = status;
   }
 }
 

@@ -13,7 +13,6 @@ interface UIConfig {
   itemTips: string;
   itemDecoration: string;
 }
-
 @Component({
   selector: 'app-standrad-supplement',
   templateUrl: './standrad-supplement.component.html',
@@ -45,7 +44,7 @@ export class StandradSupplementComponent implements OnInit {
     private reveal: RevealService,
     private router: Router,
     private preload: PreloadService,
-    private loading: LoadingService
+    private loading: LoadingService,
   ) { }
 
   ngOnInit() {
@@ -71,16 +70,5 @@ export class StandradSupplementComponent implements OnInit {
       this.reveal.show(this.currentList);
     });
   }
-  getList(times) {
-
-  }
-  cache(times, handle: Function) {
-
-    this.preload.gacha(times , this.mode).subscribe(list => {
-      this.currentList = list;
-      handle(this.currentList);
-    });
-  }
-
 }
 

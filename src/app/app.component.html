@@ -26,6 +26,12 @@
       <app-image-in-button [icon]="'HCoin'" link="/about/" [width]="100">
         关于
       </app-image-in-button>
+      <div class="options">
+        <div class="input-wrapper">
+          <input type="checkbox" (change)="updateProtection($event.target.checked)" [checked]="state.enableProtection" id="enableProtection">
+          <label for="enableProtection">开启保底</label>
+        </div>
+      </div>
     </div>
   </div>
 </div>

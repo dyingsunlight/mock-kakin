@@ -1,14 +1,32 @@
 import {Possibility} from '../interface/possibility';
 import {GachaItem} from '../interface/gacha-item';
 import { GachaExecutorParams } from '../interface/gacha-executor';
-import { prevProcessing } from './prev-processing';
-import { getItemLevel } from './util/item-level';
 import { GachaPreProcessParams } from '../interface/gacha-pre-process';
 
-export const gachaExecutor = function (params: GachaExecutorParams): GachaItem[] {
+import { GachaProcessing } from './gacha-processing';
+import { AppendantProcessing } from './appendant-processing';
+import { getItemLevel } from './util/item-level';
+
+export const withAppendant = function (params: GachaExecutorParams): GachaItem[] {
+  const items = mainGacha(GachaProcessing, params);
+  const appendantItems = mainGacha(AppendantProcessing, params);
+  return mixArray<GachaItem>(items, appendantItems);
+};
+
+export const withoutAppendant = function (params: GachaExecutorParams): GachaItem[] {
+  return mainGacha(GachaProcessing, params);
+};
+
+/**
+ * 实际抽取物品的操作
+ * @param itemProcessFunction 预设的处理器函数
+ * @params params 抽取的参数集合
+ * @returns {GachaItem[]}
+ */
+const mainGacha = function (itemProcessFunction: Function, params: GachaExecutorParams): GachaItem[] {
   const output: GachaItem[] = [];
-  for (let i = 0; i < params.times * 2; i++) {
-    const {name, type} = executor([params.possible]);
+  for (let i = 0; i < params.times; i++) {
+    const {name, type} = getItemFromPossible([params.possible]);
     // 初步生成物品名称和文件名
     let item: GachaItem = {
       name: name,
@@ -21,7 +39,7 @@ export const gachaExecutor = function (params: GachaExecutorParams): GachaItem[]
       item,
       controlParams: params
     };
-    item = prevProcessing(preParams);
+    item = itemProcessFunction(preParams);
     // 如果预处理器判断此条目无法使用，则忽略并且再次抓取新条目
     if (!item) {
       i--;
@@ -29,26 +47,50 @@ export const gachaExecutor = function (params: GachaExecutorParams): GachaItem[]
     }
     output.push(item);
   }
-
   return output;
-  function executor(possibles: Possibility[]): GachaItem {
-    const factors: number[] = [];
-    possibles.forEach(possible => factors.push(+possible.factor));
-    const currentSelected = selectFactor(factors);
-    const currentPossible = possibles[currentSelected];
+  function getItemFromPossible(possibles: Possibility[]): GachaItem {
+    // 生成由 factor:number 组成的数组
+    const factors: number[] = possibles.reduce((prev: number[], possible) => {prev.push(possible.factor); return prev; }, []);
+    // selectFactor 随机从数组中选取一个数，被选取的概率和该数所占整体的大小正相关。
+    const currentPossible = possibles[selectFactor(factors)];
+    // 优先执行contents，选择的如果拥有有效的 contents 属性，则进行内容选择
     if (currentPossible.contents && currentPossible.contents.length) {
       return { name: selectRandItem(currentPossible.contents), type: currentPossible.type };
-    } else {
-      return executor(currentPossible.possibility);
+    }
+    // 选择的如果拥有有效的 contents 属性，则进行内容选择
+    if (currentPossible.possibility && currentPossible.possibility.length) {
+      return getItemFromPossible(currentPossible.possibility);
     }
   }
 };
 
+/**
+ * 将两个数组的每个元素相互混合({a1,a2,a3}, {b1,b2,b3}) => {a1,b1,a2,b2,a3,b3}
+ * @param {T[]} arr1
+ * @param {T[]} arr2
+ * @returns {T[]}
+ */
+const mixArray = function<T>(arr1: T[], arr2: T[]): T[] {
+  const output = [];
+  let lastIndex = 0;
+  for (const item of arr1) {
+    output.push(item);
+    if (arr2.length > lastIndex) {
+      output.push(arr2[lastIndex]);
+    }
+    lastIndex++;
+  }
+  return output;
+};
 
+/**
+ * 随机挑出数组中的某一项
+ * @param {T[]} arr
+ * @returns {T}
+ */
 const selectRandItem = function <T>(arr: T[]): T {
   return arr[Math.ceil(Math.random() * arr.length) - 1];
 };
-
 
 /**
  * 随机从数组中选取一个数，被选取的概率和该数所占整体的大小正相关。

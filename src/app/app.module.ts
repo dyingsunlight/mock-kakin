@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PagesModule } from './pages/pages.module';
 import { HttpClientModule } from '@angular/common/http';
 
+import { StateService } from './core/service/state.service';
 import { RevealService } from './core/service/reveal.service';
 import { PreloadService } from './core/service/preload.service';
 import { LoadingService } from './core/service/loading.service';
@@ -36,7 +37,8 @@ import { LoadingComponent } from './core/components/loading/loading.component';
   providers: [
     RevealService,
     PreloadService,
-    LoadingService
+    LoadingService,
+    StateService
   ],
   bootstrap: [AppComponent]
 })

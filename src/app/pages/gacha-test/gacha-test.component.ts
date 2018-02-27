@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { getStatistics } from '../../gacha/index';
 import { prettyPrint } from '../../core/library/json-pretty';
+import { StateService } from '../../core/service/state.service';
 
 const translateDictionary = {
   'times': '实际抽取物品数量',
@@ -18,7 +19,8 @@ const translateDictionary = {
   '"11"': 'B级角色卡',
   '"12"': 'A级角色卡',
   '"13"': 'S级角色卡',
-}
+};
+
 @Component({
   selector: 'app-gacha-test',
   templateUrl: './gacha-test.component.html',
@@ -28,16 +30,17 @@ export class GachaTestComponent implements OnInit {
   times = 10000;
   current = 'standard';
   output = '';
-  constructor() { }
+  constructor(
+    protected state: StateService
+  ) { }
 
   ngOnInit() {
   }
   start() {
     this.output = '';
-    this.output += prettyPrint(getStatistics(this.times, this.current), ' ');
+    this.output += prettyPrint(getStatistics(this.times, this.current, this.state.enableProtection), ' ');
     for (const key of Object.keys(translateDictionary)) {
       this.output = this.output.replace(new RegExp(key, 'g'), translateDictionary[key]);
     }
   }
-
 }

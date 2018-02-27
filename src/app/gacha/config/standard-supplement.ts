@@ -4,14 +4,18 @@ import {Possibility} from '../interface/possibility';
 // 根据实际测试的结果以及 崩坏3情报室发布的概率信息来看
 // 游戏内实际的抽取概率大致只有公示概率的 1/4， 因此乘上此因子数
 
-const factor = 0.18;
+// 18.2.27 更新，
+// 修复了统计函数的BUG，经过大量的抽取测试。
+// 单抽概率约在 11%
+
+const factor = 0.2;
 export const standardSupplementPossibility: Possibility = {
   name: '标配补给蛋池配置',
   factor: 1,
   possibility: [
     {
       name: 's角色卡',
-      factor: 150 * factor * 0.6,
+      factor: 150 * factor,
       type: 'character',
       contents: [
         '月光', '鬼凯', '次元',
@@ -32,7 +36,7 @@ export const standardSupplementPossibility: Possibility = {
     },
     {
       name: 'b级女武神',
-      factor: 550 * factor * 0.8,
+      factor: 550,
       type: 'character',
       contents: [
         '疾风', '白练', '绯红', '战车',
@@ -40,7 +44,7 @@ export const standardSupplementPossibility: Possibility = {
     },
     {
       name: 's女武神碎片',
-      factor: 127 * factor,
+      factor: 127,
       type: 'fragment',
       contents: [
         '月光', '鬼凯', '次元',
@@ -61,7 +65,7 @@ export const standardSupplementPossibility: Possibility = {
     },
     {
       name: '4星圣痕',
-      factor: 73 * factor,
+      factor: 73,
       type: 'stigmata',
       contents: [
         '埃及艳后', '姬轩辕',
@@ -81,7 +85,7 @@ export const standardSupplementPossibility: Possibility = {
     },
     {
       name: '4星武器',
-      factor: 46 * factor,
+      factor: 46,
       type: 'weapon',
       contents: ['圣遗物2nd', '索尔之锤', '超电磁炮', '能量跃迁者', '圣遗物3rd', '雷切',
         '磁暴', '鲜血之舞', '虚无之刃',  '圣遗物5th', '百手巨人初型',  '尼德霍格翼爪', '蚩尤巨炮', '日炎大剑', '极光斩舰刀'
