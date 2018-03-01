@@ -1,6 +1,7 @@
 import { GachaItem } from '../interface/gacha-item';
 import { GachaPreProcessParams } from '../interface/gacha-pre-process';
 
+import { precisionModeSpecialRule } from './prev-processor/precision-mode-rule';
 import { filePathAppend } from './prev-processor/file-append';
 import { stigmataProcessor } from './prev-processor/stigmata';
 import { fragmentProcessor } from './prev-processor/fragment';
@@ -17,6 +18,8 @@ const processors = [
   fragmentProcessor,
   // 创建图像和缩略图路径
   iconAndImagePathAppend,
+  // 精准模式特殊规则（必出武器或者圣痕）
+  precisionModeSpecialRule,
   // 每10连进行保底
   africaCounterProcessor
 ];
