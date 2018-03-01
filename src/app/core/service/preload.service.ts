@@ -8,7 +8,6 @@ import 'rxjs/add/observable/forkJoin';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
-import { Cache } from '../library/cache';
 import { StateService } from './state.service';
 
 @Injectable()
@@ -18,13 +17,12 @@ export class PreloadService {
     protected state: StateService
   ) {
   }
-  cache = new Cache();
 
-  gacha(times: number, type: string, onUpdate ?: Function): Observable<GachaItem[]> {
-    const list: GachaItem[] = gachaWithAppendant(times, type, this.state.enableProtection);
+  gacha(times: number, mode: string, onUpdate ?: Function): Observable<GachaItem[]> {
+    const list: GachaItem[] = gachaWithAppendant(times, mode, this.state.enableProtection);
     return Observable.create(observer => {
       this.waitForPreload(list, onUpdate).subscribe(res => {
-        this.cache.setHistory(list);
+        this.state.cache.setHistory(list, mode);
         observer.next(list);
         observer.complete();
       });
@@ -33,7 +31,7 @@ export class PreloadService {
   waitForPreload(list: GachaItem[], onUpdate ?: Function) {
     const observableList: Observable<any>[] = [];
     const progress = {complete: 0, total: list.length * 2};
-    for (const item of this.cache.checkHistory(list)) {
+    for (const item of this.state.cache.checkHistory(list)) {
       observableList.push(this.http.get(item.image,  { responseType: 'blob'})
         .retry(3)
         // 更新进度

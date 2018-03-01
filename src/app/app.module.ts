@@ -9,6 +9,7 @@ import { StateService } from './core/service/state.service';
 import { RevealService } from './core/service/reveal.service';
 import { PreloadService } from './core/service/preload.service';
 import { LoadingService } from './core/service/loading.service';
+import { HistoryService } from './core/service/history.service';
 
 import { AppComponent } from './app.component';
 import { GachaRevealItemComponent } from './core/components/gacha-reveal-item/reveal-item.component';
@@ -17,6 +18,7 @@ import { GachaRevealComponent } from './core/components/gacha-reveal/gacha-revea
 import { OverviewItemsComponent } from './core/components/overview-items/overview-items.component';
 import { OverviewItemChipComponent } from './core/components/overview-item-chip/overview-item-chip.component';
 import { LoadingComponent } from './core/components/loading/loading.component';
+import { HistoryComponent } from './core/components/history/history.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { LoadingComponent } from './core/components/loading/loading.component';
     GachaRevealItemComponent,
     OverviewItemsComponent,
     OverviewItemChipComponent,
-    LoadingComponent
+    LoadingComponent,
+    HistoryComponent
   ],
   imports: [
     HttpClientModule,
@@ -38,6 +41,7 @@ import { LoadingComponent } from './core/components/loading/loading.component';
     RevealService,
     PreloadService,
     LoadingService,
+    HistoryService,
     StateService
   ],
   bootstrap: [AppComponent]

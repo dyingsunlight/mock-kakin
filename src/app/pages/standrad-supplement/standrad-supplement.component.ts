@@ -4,6 +4,7 @@ import { GachaItem } from '../../gacha/interface/gacha-item';
 import { RevealService } from '../../core/service/reveal.service';
 import { PreloadService } from '../../core/service/preload.service';
 import { LoadingService } from '../../core/service/loading.service';
+import { HistoryService } from '../../core/service/history.service';
 
 interface UIConfig {
   banner: string;
@@ -13,6 +14,7 @@ interface UIConfig {
   itemTips: string;
   itemDecoration: string;
 }
+
 @Component({
   selector: 'app-standrad-supplement',
   templateUrl: './standrad-supplement.component.html',
@@ -22,7 +24,7 @@ export class StandradSupplementComponent implements OnInit {
   uiConfig: {[key: string]: UIConfig} = {
     standard: {
       banner: 'GachaPic_banner_1',
-      bannerText: '标配补给中不含灵魂觉醒角色(如圣仪装·今祥) 十回补给必定有A级或以上女武神降临，抽到重复女武神会自动分解为碎片。',
+      bannerText: '标配补给中不含灵魂觉醒角色(如圣仪装·今祥) 十回补给必定有A级或以上女武神降临，抽到重复女武神会自动分解为碎片。(点击此处查看补给记录)',
       bannerTitleImage: 'standard-supplement',
       cardStyle: 'standrad-card',
       itemTips: '可获得物品：女武神或2-4星装备、材料',
@@ -30,7 +32,7 @@ export class StandradSupplementComponent implements OnInit {
     },
     equipment: {
       banner: 'GachaPic_banner_2',
-      bannerText: '装备补给测试版。',
+      bannerText: '装备补给测试版。(点击此处查看补给记录)',
       bannerTitleImage: 'equipment-supplement',
       cardStyle: 'equipment-card',
       itemTips: '可获得物品：2-4星装备、材料',
@@ -45,6 +47,7 @@ export class StandradSupplementComponent implements OnInit {
     private router: Router,
     private preload: PreloadService,
     private loading: LoadingService,
+    public history: HistoryService
   ) { }
 
   ngOnInit() {

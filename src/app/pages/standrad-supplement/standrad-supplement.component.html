@@ -18,6 +18,7 @@
       [banner]="uiConfig[mode].banner"
       [title]="uiConfig[mode].bannerTitleImage"
       [text]="uiConfig[mode].bannerText"
+      (click)="history.show(mode)"
     >
     </app-gacha-banner>
     <app-gacha-control-box

@@ -20,7 +20,7 @@ export const weapon = {
   '蚩尤巨炮': 'Cannon_B16_122_4',
   '量子毁灭者II型': 'Cannon_B17_130_4',
   '火刀真田': 'Cannon_B21_149_4',
-  '加特林': 'Cannon_B22_172_4',
+  'M134火神机枪': 'Cannon_B22_172_4',
   '提尔的断腕': 'Cannon_B23_173_4',
   '歼星者19C': 'Cannon_B25_177_4',
   'unknow-1': 'Cannon_B26_178_4',

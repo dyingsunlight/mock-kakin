@@ -1,0 +1,15 @@
+<div class="history" (click)="closeHistory()" *ngIf="isActive">
+  <div class="body">
+    <div class="title">
+      <span>
+        个人 {{ dictionary[mode] }} 记录
+      </span>
+    </div>
+    <ul>
+      <li *ngFor="let item of list"
+          [class.high-level]="item.level >10 || ((item.type === 'stigmata' || item.type === 'weapon') && item.level === 4)">
+        {{ typeText[item.type] }} {{ item.name }}
+      </li>
+    </ul>
+  </div>
+</div>
