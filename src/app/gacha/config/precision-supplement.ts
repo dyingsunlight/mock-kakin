@@ -14,7 +14,7 @@ export const precisionSupplementPossibility: Possibility = {
       factor: 3720 * factor,
       type: 'stigmata',
       contents: [
-        '德古拉'
+        '普朗克'
       ]
     },
     {
@@ -22,7 +22,7 @@ export const precisionSupplementPossibility: Possibility = {
       factor: 3717 * factor,
       type: 'stigmata',
       contents: [
-        '奥托', '女娲', '姬轩辕', '板鸭黯影'
+        '米开朗其罗', '岳父', '特斯拉乐队', '卡莲颂歌'
       ]
     },
     {
@@ -45,7 +45,7 @@ export const precisionSupplementPossibility: Possibility = {
       factor: 2749 * factor,
       type: 'weapon',
       contents: [
-        '索尔之锤'
+        'M134火神机枪'
       ]
     },
     {
@@ -53,8 +53,8 @@ export const precisionSupplementPossibility: Possibility = {
       factor: 2749 * factor,
       type: 'weapon',
       contents: [
-        '圣遗物2nd', '藏锋', '火刀真田', '巴鲁蒙格',
-        '牛鬼切', '樱花的誓约'
+        '原型·妖精之弓', '妖精剑', '磁暴·斩', '百手巨人初型',
+        '鲜血之舞', '百鸟问天'
       ]
     },
     {

@@ -77,7 +77,7 @@ export const weapon = {
   '脉冲太刀19式': 'Katana_M3_20_3',
   '雷切': 'Katana_M4_21_4',
   '圣遗物3rd': 'Katana_M5_22_4',
-  '磁暴': 'Katana_M6_24_4',
+  '磁暴·斩': 'Katana_M6_24_4',
   '试作型脉冲太刀': 'Katana_M7_70_1',
   '复合刀·柳叶': 'Katana_M8_71_2',
   '结晶逆刃刀': 'Katana_M10_74_3',
@@ -109,6 +109,6 @@ export const weapon = {
   '光与影': 'Pistol_K14_69_4',
   '能量跃迁者': 'Pistol_K17_128_4',
   '雷刀·鬼角': 'Pistol_K21_148_4',
-  '妖精枪': 'Pistol_K24_155_4',
+  '原型·妖精之弓': 'Pistol_K24_155_4',
   '异性·赫尔之弓': 'Pistol_K26_184_4',
 };
