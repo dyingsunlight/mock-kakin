@@ -16,8 +16,8 @@ export const getItemLevel = function (name, type): number {
     case 'stigmata':
       return getLevel(stigmataLevel, name);
     case 'weapon':
-      const weaponName = weapon[name];
-      return weaponName ? +weaponName.slice(-1) : 1 ;
+      const weaponFile = weapon[name];
+      return weaponFile ? +weaponFile.slice(-1) : 1 ;
     case 'character':
       return getLevel(characterLevel, name);
     case 'fragment':

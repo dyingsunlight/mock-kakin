@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
-import {GachaItem} from '../../../gacha/interface/gacha-item';
+import { GachaItem } from '../../../gacha/interface/gacha-item';
 import { url } from '../../../config';
+import { stigmataSlot } from '../../../gacha/enum/stigmata-slot';
 
 @Component({
   selector: 'app-stigmata-indicator',
@@ -17,19 +18,19 @@ export class StigmataIndicatorComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges) {
     if ( changes.item) {
-      this.getIndicator(changes.item.currentValue.name);
+      this.getIndicator(changes.item.currentValue);
     }
   }
 
-  getIndicator(name: string) {
-    switch (name.slice(-3)) {
-      case '(上)':
+  getIndicator(item: GachaItem) {
+    switch (item.extra.suffix) {
+      case stigmataSlot.top:
         this.indicator = `${url.gacha}/effect/stigmata-top.png`;
         break;
-      case '(中)':
+      case stigmataSlot.mid:
         this.indicator = `${url.gacha}/effect/stigmata-mid.png`;
         break;
-      case '(下)':
+      case stigmataSlot.bottom:
         this.indicator = `${url.gacha}/effect/stigmata-bottom.png`;
         break;
     }

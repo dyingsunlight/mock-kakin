@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges, OnDestroy } from '@angular/core';
 import { GachaItem } from '../../../gacha/interface/gacha-item';
+import { deepMigrate } from '../../library/object';
 
 interface TrackableItem extends GachaItem {
   id: number;
@@ -33,16 +34,9 @@ export class OverviewItemsComponent implements OnInit, OnChanges, OnDestroy {
   putNextItem() {
     if (this.currentIndex < this.items.length - 1) {
       this.currentIndex ++;
-      const item = this.items[this.currentIndex];
-      this.trackableItems.push({
-        name: item.name,
-        file: item.file,
-        type: item.type,
-        level: item.level,
-        icon: item.icon,
-        image: item.image,
-        id: this.currentIndex
-      });
+      const item: TrackableItem = {id : this.currentIndex};
+      deepMigrate(this.items[this.currentIndex], item);
+      this.trackableItems.push(item);
     }
   }
   trackById(item: TrackableItem) {

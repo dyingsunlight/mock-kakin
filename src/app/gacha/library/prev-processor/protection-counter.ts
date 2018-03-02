@@ -5,7 +5,7 @@ const notResetList = ['equipment', 'fragment'];
 import { GachaItem } from '../../interface/gacha-item';
 // 按照分类计算，距离下一次保底的次数
 const resetProtection: {[type: string]: number} = {};
-export const africaCounterProcessor = function(params: GachaPreProcessParams): GachaItem {
+export const GachaProtectionCounter = function(params: GachaPreProcessParams): GachaItem {
   if (params.controlParams.disableProtection) {
     // 禁用保底，放飞自我
     return params.item;

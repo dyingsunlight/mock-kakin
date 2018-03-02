@@ -5,6 +5,7 @@ export interface GachaItem {
   file ?: string;
   // 归属类别
   type ?: string;
+  // 星级
   level ?: number;
   // level 1 - 4 正常星级
   // level 10 b 女武神
@@ -14,4 +15,13 @@ export interface GachaItem {
   icon ?: string;
   // 展示图
   image ?: string;
+  // 附加参数
+  extra ?: {
+    // 后缀，用于显示圣痕位置
+    suffix ?: string;
+    // 材料数量，材料/经验专业
+    amount ?: number;
+    // 基础等级，武器或圣痕
+    baseLevel ?: number
+  };
 }

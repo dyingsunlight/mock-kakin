@@ -4,29 +4,7 @@ import { equipmentSupplementPossibility } from '../../gacha/config/equipment-sup
 import { precisionSupplementPossibility } from '../../gacha/config/precision-supplement';
 import { prettyPrint } from '../../core/library/json-pretty';
 import {Possibility} from '../../gacha/interface/possibility';
-
-const deepClone = function (from: {[key: string]: any}, to: {[key: string]: any} = {}, overwrite = true) {
-  for (const key of Object.keys(from)) {
-    const fromType = typeof from[key];
-    if (fromType === 'object' && from[key]) {
-      if (!to.hasOwnProperty(key)) {
-        to[key] = {};
-      }
-      if (overwrite && (typeof to[key] !== 'object' || !to[key])) {
-        // is value
-        to[key] = {};
-      } else {
-        deepClone(from[key], to[key], overwrite);
-      }
-    }
-    if (fromType !== 'object' || !from[key]) {
-      if (!to.hasOwnProperty(key) ||　overwrite) {
-        //  to没有或者复写启用
-        to[key] = from[key];
-      }
-    }
-  }
-};
+import { deepMigrate } from '../../core/library/object';
 
 @Component({
   selector: 'app-customize-config',
@@ -50,7 +28,7 @@ export class CustomizeConfigComponent implements OnInit {
     this.text = prettyPrint(this.config[name], ' ');
   }
   confirm() {
-    deepClone(JSON.parse(this.text), this.config[this.current], true);
+    deepMigrate(JSON.parse(this.text), this.config[this.current], true);
   }
   showPossibility() {
     // 只统计第二级的

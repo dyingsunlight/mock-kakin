@@ -1,8 +1,8 @@
-import { url } from '../../../config';
-import { GachaItem } from '../../interface/gacha-item';
-import { GachaPreProcessParams } from '../../interface/gacha-pre-process';
+import { url } from '../../../../config';
+import { GachaItem } from '../../../interface/gacha-item';
+import { GachaPreProcessParams } from '../../../interface/gacha-pre-process';
 
-export const iconAndImagePathAppend = function (params: GachaPreProcessParams) {
+export const SetupIconAndImagePath = function (params: GachaPreProcessParams) {
   const item = params.item;
   switch (item.type) {
     case 'weapon':

@@ -1,27 +1,29 @@
 import { GachaItem } from '../interface/gacha-item';
 import { GachaPreProcessParams } from '../interface/gacha-pre-process';
 
-import { precisionModeSpecialRule } from './prev-processor/precision-mode-rule';
-import { filePathAppend } from './prev-processor/file-append';
-import { stigmataProcessor } from './prev-processor/stigmata';
-import { fragmentProcessor } from './prev-processor/fragment';
+import { PrecisionModeSpecialRule } from './prev-processor/precision-mode-rule';
+import { SetupfilePath } from './prev-processor/setup/setup-file';
+import { SetupItemLevel } from './prev-processor/setup/setup-level';
 
-import { africaCounterProcessor } from './prev-processor/africa-counter';
-import { iconAndImagePathAppend } from './prev-processor/image-icon-append';
-
+import { GachaProtectionCounter } from './prev-processor/protection-counter';
+import { SetupIconAndImagePath } from './prev-processor/setup/setup-image-icon';
+import { AdapterForName } from './prev-processor/adapter/adapter-name';
+// adapter 系列必须放置在最前面
+// setup 系列基于adapter，相互不干扰所以顺序无所谓，
+// 最后是特定规则 保底机制/只出附件机制/特殊模式的特别机制等
 const processors = [
+  // name 适配器，将多余的属性转移到extra储存
+  AdapterForName,
   // 为角色卡和部装备创建名字
-  filePathAppend,
-  // 为圣痕随机抽取不同部位，并且创建名字
-  stigmataProcessor,
-  // 为角色碎片创建名字
-  fragmentProcessor,
+  SetupfilePath,
+  // 建立物品等级
+  SetupItemLevel,
   // 创建图像和缩略图路径
-  iconAndImagePathAppend,
+  SetupIconAndImagePath,
   // 精准模式特殊规则（必出武器或者圣痕）
-  precisionModeSpecialRule,
+  PrecisionModeSpecialRule,
   // 每10连进行保底
-  africaCounterProcessor
+  GachaProtectionCounter
 ];
 
 /**

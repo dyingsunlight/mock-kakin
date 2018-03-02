@@ -31,7 +31,6 @@ const mainGacha = function (itemProcessFunction: Function, params: GachaExecutor
     let item: GachaItem = {
       name: name,
       type: type,
-      level: getItemLevel(name, type)
     };
     // 生成预处理器执行参数并执行
     const preParams: GachaPreProcessParams = {
