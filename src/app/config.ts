@@ -1,6 +1,6 @@
 import { environment } from '../environments/environment';
 
-const base = environment.production ? 'http://mock-kakin.cdn.bcebos.com/mock-kakin/' : '';
+const base = environment.production ? 'mock-kakin/' : '';
 const images = base + '/assets/images/';
 export const url = {
   base: base,
