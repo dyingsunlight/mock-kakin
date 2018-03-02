@@ -44,6 +44,12 @@ export class GachaRevealComponent implements OnInit, OnChanges {
   loadNextItem() {
     this.item1 = this.itemList.length > this.lastItemID ++ ? this.itemList[this.lastItemID] : undefined;
     this.item2 = this.itemList.length > this.lastItemID ++ ? this.itemList[this.lastItemID] : undefined;
+    // 高星级在左侧
+    if (this.item2 && this.item1 && this.item2.level > this.item1.level) {
+      const tmp = this.item2;
+      this.item2 = this.item1;
+      this.item1 = tmp;
+    }
     if (!this.item1 && !this.item2) {
       this.itemList = sortItems(this.itemList);
       this.isOverviewActive = true;
