@@ -46,10 +46,11 @@ export const getStatistics = function (times: number, mode = 'standard', protect
     const items = gachaWithoutAppendant(10, mode, protection);
     total += items.length;
     for (const item of items) {
-      if (statics.hasOwnProperty(item.name)) {
-        statics[item.name]++;
+      const name = item.name + item.extra.suffix;
+      if (statics.hasOwnProperty(name)) {
+        statics[name]++;
       } else {
-        statics[item.name] = 1;
+        statics[name] = 1;
       }
       if (category.hasOwnProperty(item.type)) {
         if (category[item.type].hasOwnProperty(item.level)) {

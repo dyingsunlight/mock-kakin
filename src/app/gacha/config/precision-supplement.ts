@@ -45,7 +45,7 @@ export const precisionSupplementPossibility: Possibility = {
       factor: 2749 * factor,
       type: 'weapon',
       contents: [
-        'M134火神机枪'
+        '妖精剑'
       ]
     },
     {
@@ -53,7 +53,7 @@ export const precisionSupplementPossibility: Possibility = {
       factor: 2749 * factor,
       type: 'weapon',
       contents: [
-        '原型·妖精之弓', '妖精剑', '磁暴·斩', '百手巨人初型',
+        '原型·妖精之弓', 'M134火神机枪', '磁暴·斩', '百手巨人初型',
         '鲜血之舞', '百鸟问天'
       ]
     },
