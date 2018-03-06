@@ -13,6 +13,9 @@
     </div>
   </div>
   <div class="stage stage-2" (click)="nextStage(1)" [ngClass]="{active: isRevealed && !isImageLoading, 'boundAnimate': isRevealed && !isImageLoading}">
+    <div class="rank-title">
+      <img [src]="rankTitle"/>
+    </div>
     <div class="content" [ngClass]  ="item.type">
       <img [src]="item.image" (load)="imageLoadComplete()"/>
     </div>

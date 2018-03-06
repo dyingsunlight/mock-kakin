@@ -60,6 +60,14 @@
     }
   }
   .stage-2 {
+    .rank-title{
+      height: 80px;
+      text-align: center;
+      // animation: glowEffect 2s infinite;
+      img{
+        height: 100%;
+      }
+    }
     .content {
       left: -10%;
       top: 30%;
@@ -151,5 +159,17 @@
   }
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes glowEffect {
+  0%{
+    -webkit-filter: drop-shadow(0px 0px 10px rgba(255, 0, 150, 0.6));
+  }
+  50%{
+    -webkit-filter: drop-shadow(0px 0px 10px rgba(255, 0, 203, 0.9));
+  }
+  100%{
+    -webkit-filter: drop-shadow(0px 0px 10px rgba(255, 0, 150, 0.6));
   }
 }
