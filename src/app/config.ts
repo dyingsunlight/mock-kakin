@@ -1,6 +1,5 @@
 import { environment } from '../environments/environment';
 
-console.log(environment.resourcesPath);
 const images = environment.resourcesPath + '/assets/images/';
 export const url = {
   base: environment.resourcesPath,
