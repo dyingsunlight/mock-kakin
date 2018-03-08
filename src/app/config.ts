@@ -1,9 +1,9 @@
 import { environment } from '../environments/environment';
 
-const base = environment.production ? 'mock-kakin/' : '';
-const images = base + '/assets/images/';
+console.log(environment.resourcesPath);
+const images = environment.resourcesPath + '/assets/images/';
 export const url = {
-  base: base,
+  base: environment.resourcesPath,
   images: images,
   backgrounds: images + '/backgrounds/',
   icons: images + '/icons/',

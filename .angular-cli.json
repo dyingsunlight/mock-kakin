@@ -5,6 +5,33 @@
   },
   "apps": [
     {
+      "name": "default",
+      "root": "src",
+      "outDir": "default",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "app-index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "deployUrl": "/",
+      "styles": [
+        "styles.less"
+      ],
+      "scripts": [],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    },
+    {
+      "name": "github-pages",
       "root": "src",
       "outDir": "docs",
       "assets": [
@@ -18,7 +45,7 @@
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
-      "deployUrl": "/mock-kakin/",
+      "deployUrl": "/",
       "styles": [
         "styles.less"
       ],
@@ -26,7 +53,7 @@
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts"
+        "prod": "environments/environment.github-pages.prod.ts"
       }
     }
   ],

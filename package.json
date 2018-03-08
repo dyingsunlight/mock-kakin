@@ -5,7 +5,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --no-extract-license --deploy-url /mock-kakin/",
+    "build-for-github": "ng build --prod --no-extract-license --deploy-url /mock-kakin/ --base-href /mock-kakin/ --app=github-pages",
+    "build": "ng build --prod --no-extract-license --delete-output-path=false --app=default",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",

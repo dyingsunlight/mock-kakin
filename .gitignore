@@ -39,11 +39,10 @@ testem.log
 /e2e/*.map
 
 # System Files
-.DS_Store
 Thumbs.db
 /raw-assets/
-gulpfile.js
 yarn-error.log
 yarn.lock
 
-!/src/assets/
+/default
+Would skip repository default/
