@@ -8,10 +8,11 @@
 4. 几乎和游戏一致的界面风格，拥有保底机制并且默认开启。
 
 ## DEMO 预览
-Github pages version :  
+BAE:  
+http://mockkakin.duapp.com  
+
+Github Pages (备用) :  
 https://dyingsunlight.github.io/mock-kakin/  
-百度开放云  
-https://mock-kakin.cdn.bcebos.com/index.html
 
 可配置的物品名称全部都可以在
 [这里的目录找到](https://github.com/dyingsunlight/mock-kakin/tree/master/src/app/gacha/resources)  
