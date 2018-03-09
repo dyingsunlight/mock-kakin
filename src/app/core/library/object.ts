@@ -20,3 +20,9 @@ export const deepMigrate = function(from: {[key: string]: any}, to: {[key: strin
     }
   }
 };
+
+export const toArray = function (obj: object) {
+  const arr = [];
+  Object.keys(obj).forEach(key => arr.push(obj[key]));
+  return arr;
+};

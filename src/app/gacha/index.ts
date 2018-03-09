@@ -3,6 +3,7 @@ import { GachaExecutorParams } from './interface/gacha-executor';
 import { standardSupplementPossibility } from './config/standard-supplement';
 import { equipmentSupplementPossibility } from './config/equipment-supplement';
 import { precisionSupplementPossibility } from './config/precision-supplement';
+import { GachaStatisticsItem } from './interface/gacha-statistics';
 
 const possibleList = {
   standard: standardSupplementPossibility,
@@ -66,6 +67,46 @@ export const getStatistics = function (times: number, mode = 'standard', protect
   const output = {};
   for (const key of Object.keys(statics)) {
     output[key] = String((statics[key] / total * 100).toFixed(3)) + '%';
+  }
+  for (const key of Object.keys(category)) {
+    for (const level of Object.keys((category[key]))) {
+      category[key][level] = (category[key][level] / total * 100).toFixed(3) + '%';
+    }
+  }
+  return {times: total, category, detail: statics };
+};
+
+export const getStatisticsEx = function (times: number, mode = 'standard', protection = true) {
+  const statics: {[key: string]: GachaStatisticsItem} = {};
+  const category = {};
+  let total = 0;
+  for (let i = 0; i < times; i++) {
+    const items = gachaWithoutAppendant(10, mode, protection);
+    total += items.length;
+    for (const item of items) {
+      const name = item.name + item.extra.suffix;
+      if (statics.hasOwnProperty(name)) {
+        statics[name].amount ++;
+      } else {
+        statics[name] = {};
+        statics[name].amount = 1;
+        statics[name].level = item.level;
+        statics[name].type = item.type;
+        statics[name].name = name;
+      }
+      if (category.hasOwnProperty(item.type)) {
+        if (category[item.type].hasOwnProperty(item.level)) {
+          category[item.type][item.level]++;
+        } else {
+          category[item.type][item.level] = 1;
+        }
+      } else {
+        category[item.type] = {};
+      }
+    }
+  }
+  for (const key of Object.keys(statics)) {
+    statics[key].possibility = Number((statics[key].amount / total * 100).toFixed(3));
   }
   for (const key of Object.keys(category)) {
     for (const level of Object.keys((category[key]))) {

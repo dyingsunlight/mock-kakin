@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --app=develop",
     "build-for-github": "ng build --prod --no-extract-license --deploy-url /mock-kakin/ --base-href /mock-kakin/ --app=github-pages",
     "build": "ng build --prod --no-extract-license --delete-output-path=false --app=default",
     "test": "ng test",

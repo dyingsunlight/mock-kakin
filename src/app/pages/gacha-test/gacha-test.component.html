@@ -9,11 +9,31 @@
       </select>
     </div>
     <div class="input-wrapper">
-      <label for="gacha-amount">执行抽取的次数</label>
+      <label for="gacha-amount">执行抽取的十连次数 (点击标题可进行排序)</label>
       <input id="gacha-amount" [(ngModel)]="times" />
     </div>
   </div>
-  <textarea [(ngModel)]="output">
-  </textarea>
+  <div class="items">
+    <table>
+      <thead>
+      <tr>
+        <td (click)="sortBy('name')">名称</td>
+        <td (click)="sortBy('type')">类型</td>
+        <td (click)="sortBy('level')">等级</td>
+        <td (click)="sortBy('amount')">次数</td>
+        <td (click)="sortBy('possibility')">抽取概率</td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of itemList">
+        <td>{{ item.name }}</td>
+        <td>{{ typeText[item.type] }}</td>
+        <td>{{ typeText[item.level] }}</td>
+        <td>{{ item.amount }}</td>
+        <td>{{ item.possibility }}%</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
   <button (click)="start()">开始抽取</button>
 </div>
