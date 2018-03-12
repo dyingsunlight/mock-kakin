@@ -45,7 +45,7 @@ export const precisionSupplementPossibility: Possibility = {
       factor: 2749 * factor,
       type: 'weapon',
       contents: [
-        '异形·赫尔之弓'
+        '提尔的断腕'
       ]
     },
     {
@@ -53,7 +53,7 @@ export const precisionSupplementPossibility: Possibility = {
       factor: 2749 * factor,
       type: 'weapon',
       contents: [
-        '索尔之锤', '圣遗物3rd', '提尔的断腕', '仿犹大·血之拥抱',
+        '索尔之锤', '圣遗物3rd', '异形·赫尔之弓', '仿犹大·血之拥抱',
         '百鸟问天'
       ]
     },
