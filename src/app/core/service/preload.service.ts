@@ -1,14 +1,14 @@
-import { Injectable } from '@angular/core';
-import { GachaItem } from '../../gacha/interface/gacha-item';
-import { gachaWithAppendant } from '../../gacha/index';
-import { HttpClient } from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {GachaItem} from '../../gacha/interface/gacha-item';
+import {gachaWithAppendant} from '../../gacha/index';
+import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/retry';
 import 'rxjs/add/observable/forkJoin';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
-import { StateService } from './state.service';
+import {StateService} from './state.service';
 
 @Injectable()
 export class PreloadService {
@@ -21,10 +21,12 @@ export class PreloadService {
   gacha(times: number, mode: string, onUpdate ?: Function): Observable<GachaItem[]> {
     const list: GachaItem[] = gachaWithAppendant(times, mode, this.state.enableProtection);
     return Observable.create(observer => {
-      this.waitForPreload(list, onUpdate).subscribe(res => {
-        this.state.cache.setHistory(list, mode);
-        observer.next(list);
-        observer.complete();
+      this.waitForPreload(list, onUpdate).subscribe({
+        complete: () => {
+          this.state.cache.setHistory(list, mode);
+          observer.next(list);
+          observer.complete();
+        },
       });
     });
   }
