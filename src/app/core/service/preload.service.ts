@@ -23,6 +23,7 @@ export class PreloadService {
     return Observable.create(observer => {
       this.waitForPreload(list, onUpdate).subscribe({
         complete: () => {
+          this.state.cache.setCache(list);
           this.state.cache.setHistory(list, mode);
           observer.next(list);
           observer.complete();
@@ -33,7 +34,7 @@ export class PreloadService {
   waitForPreload(list: GachaItem[], onUpdate ?: Function) {
     const observableList: Observable<any>[] = [];
     const progress = {complete: 0, total: list.length * 2};
-    for (const item of this.state.cache.checkHistory(list)) {
+    for (const item of this.state.cache.checkCache(list)) {
       observableList.push(this.http.get(item.image,  { responseType: 'blob'})
         .retry(3)
         // 更新进度
