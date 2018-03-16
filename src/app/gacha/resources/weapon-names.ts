@@ -89,7 +89,7 @@ export const weapon = {
   '仿灵刀·冰昙天': 'Katana_M18_132_4',
   '妖精剑': 'Katana_M23_171_4',
   '灵刀·樱吹雪': 'Katana_M22_154_5',
-  '妖刀·赤染樱': 'Katana_M23_171_4',
+  '妖刀·赤染樱': 'Katana_M26_193_4',
   '雨后誓言': 'Katana_M27_176_4',
   'usp45': 'Pistol_K1_01_1',
   'usp改': 'Pistol_K1_02_1',
