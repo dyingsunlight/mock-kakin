@@ -14,7 +14,7 @@ export const precisionSupplementPossibility: Possibility = {
       factor: 3720 * factor,
       type: 'stigmata',
       contents: [
-        '薛定谔乐队'
+        '特斯拉乐队'
       ]
     },
     {
@@ -22,7 +22,7 @@ export const precisionSupplementPossibility: Possibility = {
       factor: 3717 * factor,
       type: 'stigmata',
       contents: [
-        '岳母', '浓姬', '开普勒', '牛顿'
+        '普朗克', '绯玉丸', '爱因斯坦乐队', '莎士比亚'
       ]
     },
     {
@@ -45,7 +45,7 @@ export const precisionSupplementPossibility: Possibility = {
       factor: 2749 * factor,
       type: 'weapon',
       contents: [
-        '提尔的断腕'
+        '樱花的誓约'
       ]
     },
     {
@@ -53,8 +53,8 @@ export const precisionSupplementPossibility: Possibility = {
       factor: 2749 * factor,
       type: 'weapon',
       contents: [
-        '索尔之锤', '圣遗物3rd', '异形·赫尔之弓', '仿犹大·血之拥抱',
-        '百鸟问天'
+        '超电磁炮', '虚无之刃', '蚩尤巨炮', '犹大的誓约',
+        '断光之怒亚达'
       ]
     },
     {

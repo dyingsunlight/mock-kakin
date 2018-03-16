@@ -1,0 +1,17 @@
+<div class="kakin">
+  <div class="kakin-content">
+    <app-gacha-banner
+      [banner]="'GachaPicAddition18TheresaBirthday01'"
+      [title]="'event-supplement'"
+      [text]="'2018.3.16 神恩扩充补给。(点击此处查看补给记录)'"
+      (click)="history.show('extension')"
+    >
+    </app-gacha-banner>
+    <app-gacha-control-box
+      [text]="'每十次补给必定会有A级或以上女武神出现'"
+      [card]="'extension-card'"
+      [tip]="'valkyrja-tip'"
+      (update)="start($event)"
+    ></app-gacha-control-box>
+  </div>
+</div>

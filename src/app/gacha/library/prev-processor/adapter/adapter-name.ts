@@ -20,7 +20,6 @@ export const AdapterForName = function(params: GachaPreProcessParams) {
     item.extra.suffix = '';
     break;
   }
-
   return item;
 };
 

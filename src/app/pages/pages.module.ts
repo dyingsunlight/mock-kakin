@@ -8,6 +8,7 @@ import { CustomizeConfigComponent } from './customize-config/customize-config.co
 import { GachaTestComponent } from './gacha-test/gacha-test.component';
 import { PrecisionSupplementComponent } from './precision-supplement/precision-supplement.component';
 import { AboutComponent } from './about/about.component';
+import { ExtensionSupplementComponent } from './extension-supplement/extension-supplement.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AboutComponent } from './about/about.component';
     CustomizeConfigComponent,
     GachaTestComponent,
     PrecisionSupplementComponent,
-    AboutComponent
+    AboutComponent,
+    ExtensionSupplementComponent
   ],
   imports: [
     RouterModule,

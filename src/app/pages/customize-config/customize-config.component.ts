@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { standardSupplementPossibility } from '../../gacha/config/standard-supplement';
 import { equipmentSupplementPossibility } from '../../gacha/config/equipment-supplement';
 import { precisionSupplementPossibility } from '../../gacha/config/precision-supplement';
+import { extensionSupplementPossibility } from '../../gacha/config/extension-supplement';
 import { prettyPrint } from '../../core/library/json-pretty';
 import {Possibility} from '../../gacha/interface/possibility';
 import { deepMigrate } from '../../core/library/object';
@@ -15,7 +16,8 @@ export class CustomizeConfigComponent implements OnInit {
   config = {
     standard: standardSupplementPossibility,
     precision: precisionSupplementPossibility,
-    equipment: equipmentSupplementPossibility
+    equipment: equipmentSupplementPossibility,
+    extension: extensionSupplementPossibility
   };
   current = 'standard';
   text = '';

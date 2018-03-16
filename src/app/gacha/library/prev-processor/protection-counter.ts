@@ -16,7 +16,7 @@ export const GachaProtectionCounter = function(params: GachaPreProcessParams): G
     resetProtection[controlParams.mode] = 0;
   }
   if (resetProtection[controlParams.mode] >= 9) {
-    if (controlParams.mode === 'standard' && item.level < 12) {
+    if ((controlParams.mode === 'standard' || controlParams.mode === 'extension') && item.level < 12) {
       // 只保底角色卡
       return;
     }
@@ -32,7 +32,7 @@ export const GachaProtectionCounter = function(params: GachaPreProcessParams): G
   }
   if (resetProtection[controlParams.mode] < 9) {
     let isNeedReset = false;
-    if (controlParams.mode === 'standard' && item.level > 11) {
+    if ((controlParams.mode === 'standard' || controlParams.mode === 'extension') && item.level > 11) {
       isNeedReset = true;
     }
     if (controlParams.mode === 'precision' && item.level === 4 && !notResetList.includes(item.type)) {

@@ -16,6 +16,7 @@ export const equipmentLevel = {
     '钨合金胸甲',
     '浮空装甲',
     '吼辣宝藏',
+    '初级技能材料'
   ],
   3: [
     '高级生物芯片',
@@ -40,5 +41,6 @@ export const equipmentLevel = {
     '超合金护盾',
     '吼美宝藏',
     '吼咪宝藏',
+    '高级技能材料'
   ]
 };

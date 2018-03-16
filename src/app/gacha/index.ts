@@ -4,11 +4,13 @@ import { standardSupplementPossibility } from './config/standard-supplement';
 import { equipmentSupplementPossibility } from './config/equipment-supplement';
 import { precisionSupplementPossibility } from './config/precision-supplement';
 import { GachaStatisticsItem } from './interface/gacha-statistics';
+import { extensionSupplementPossibility } from './config/extension-supplement';
 
 const possibleList = {
   standard: standardSupplementPossibility,
   equipment: equipmentSupplementPossibility,
   precision: precisionSupplementPossibility,
+  extension: extensionSupplementPossibility
 };
 
 export const gachaWithAppendant = function (times = 1, mode = 'standard', protection = true) {

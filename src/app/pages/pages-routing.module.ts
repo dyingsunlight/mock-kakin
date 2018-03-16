@@ -3,6 +3,7 @@ import { CustomizeConfigComponent } from './customize-config/customize-config.co
 import { GachaTestComponent } from './gacha-test/gacha-test.component';
 import { PrecisionSupplementComponent } from './precision-supplement/precision-supplement.component';
 import { AboutComponent } from './about/about.component';
+import { ExtensionSupplementComponent } from './extension-supplement/extension-supplement.component';
 
 export const PagesRouting = [
   {
@@ -16,6 +17,10 @@ export const PagesRouting = [
   {
     path: 'precision',
     component: PrecisionSupplementComponent
+  },
+  {
+    path: 'extension',
+    component: ExtensionSupplementComponent
   },
   {
     path: 'test',
