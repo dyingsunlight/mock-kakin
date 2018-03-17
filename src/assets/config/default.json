@@ -440,7 +440,7 @@
         "tip-image": "weapon-tip",
         "card": "equipment-card"
       },
-      "#extension": {
+      "extension": {
         "banner": "GachaPicAddition18TheresaBirthday01",
         "banner-text": "2018.3.16 神恩扩充补给。(点击此处查看补给记录)",
         "banner-title-image": "event-supplement",
