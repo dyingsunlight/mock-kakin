@@ -6,7 +6,7 @@
       "possibility": [
         {
           "name": "up的4星圣痕",
-          "factor": 930,
+          "factor": 7,
           "type": "stigmata",
           "contents": [
             "特斯拉乐队"
@@ -14,7 +14,8 @@
         },
         {
           "name": "非up的4星圣痕",
-          "factor": 930,
+          "factor": 7,
+
           "type": "stigmata",
           "contents": [
             "普朗克", "绯玉丸", "爱因斯坦乐队", "莎士比亚"
@@ -22,7 +23,7 @@
         },
         {
           "name": "3星圣痕",
-          "factor": 33694,
+          "factor": 328,
           "type": "stigmata",
           "contents": [
             "里纳耳多", "时雨绮罗", "奥吉尔",
@@ -37,7 +38,7 @@
         },
         {
           "name": "up的4星武器",
-          "factor": 687.25,
+          "factor": 4.5,
           "type": "weapon",
           "contents": [
             "樱花的誓约"
@@ -45,7 +46,7 @@
         },
         {
           "name": "非up的4星武器",
-          "factor": 687.25,
+          "factor": 4.5,
           "type": "weapon",
           "contents": [
             "超电磁炮", "虚无之刃", "蚩尤巨炮", "犹大的誓约",
@@ -54,7 +55,7 @@
         },
         {
           "name": "3星武器",
-          "factor": 11231,
+          "factor": 109,
           "type": "weapon",
           "contents": [
             "水妖精I型", "火妖精I型", "水妖精II型", "火妖精II型", "苗刀·雷妖", "苗刀·电魂", "脉冲太刀17式", "脉冲太刀19式", "马尔夫科A", "马尔夫科C",
@@ -66,8 +67,8 @@
           ]
         },
         {
-          "name": "进化材料",
-          "factor": 17072,
+          "name": "通用进化材料",
+          "factor": 166,
           "type": "equipment",
           "contents": [
             "超合金护盾", "断裂的刀柄",
@@ -77,7 +78,7 @@
         },
         {
           "name": "装备经验",
-          "factor": 17072,
+          "factor": 166,
           "type": "equipment",
           "contents": [
             "灵魂碎片", "双子灵魂碎片",
@@ -88,7 +89,7 @@
         },
         {
           "name": "钱",
-          "factor": 8536,
+          "factor": 82,
           "type": "equipment",
           "contents": [
             "吼里宝藏", "吼美宝藏", "吼咪宝藏"
@@ -199,7 +200,7 @@
       "possibility": [
         {
           "name": "s角色卡",
-          "factor": 50,
+          "factor": 70,
           "type": "character",
           "contents": [
             "月光", "鬼凯", "次元",
@@ -209,7 +210,7 @@
         },
         {
           "name": "a级女武神",
-          "factor": 337.5,
+          "factor": 700,
           "type": "character",
           "contents": [
             "游侠", "圣女", "影舞",
@@ -220,7 +221,7 @@
         },
         {
           "name": "b级女武神",
-          "factor": 550,
+          "factor": 500,
           "type": "character",
           "contents": [
             "疾风", "白练", "绯红", "战车"
@@ -327,7 +328,7 @@
       "possibility": [
         {
           "name": "4星圣痕",
-          "factor": 2139,
+          "factor": 30,
           "type": "stigmata",
           "contents": [
             "埃及艳后", "姬轩辕",
@@ -342,7 +343,7 @@
         },
         {
           "name": "3星圣痕",
-          "factor": 32977,
+          "factor": 322,
           "type": "stigmata",
           "contents": [
             "里纳耳多", "时雨绮罗", "奥吉尔",
@@ -357,7 +358,7 @@
         },
         {
           "name": "4星武器",
-          "factor": 1426,
+          "factor": 15,
           "type": "weapon",
           "contents": [
             "百手巨人初型", "圣遗物5th", "重装小兔19C",
@@ -369,7 +370,7 @@
         },
         {
           "name": "3星武器",
-          "factor": 10992,
+          "factor": 106,
           "type": "weapon",
           "contents": [
             "水妖精I型", "火妖精I型", "水妖精II型", "火妖精II型", "苗刀·雷妖", "苗刀·电魂", "脉冲太刀17式", "脉冲太刀19式", "马尔夫科A", "马尔夫科C",
@@ -382,7 +383,7 @@
         },
         {
           "name": "进化材料",
-          "factor": 16708,
+          "factor": 160,
           "type": "equipment",
           "contents": [
             "超合金护盾", "断裂的刀柄",
@@ -392,7 +393,7 @@
         },
         {
           "name": "装备经验",
-          "factor": 16708,
+          "factor": 160,
           "type": "equipment",
 
           "contents": [
@@ -403,8 +404,8 @@
           ]
         },
         {
-          "name": "还是钱",
-          "factor": 8354,
+          "name": "钱",
+          "factor": 80,
           "type": "equipment",
           "contents": [
             "吼里宝藏", "吼美宝藏", "吼咪宝藏"
