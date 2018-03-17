@@ -10,6 +10,7 @@ import { RevealService } from './core/service/reveal.service';
 import { PreloadService } from './core/service/preload.service';
 import { LoadingService } from './core/service/loading.service';
 import { HistoryService } from './core/service/history.service';
+import { LoadConfigService } from './core/service/load-config.service';
 
 import { AppComponent } from './app.component';
 import { GachaRevealItemComponent } from './core/components/gacha-reveal-item/reveal-item.component';
@@ -39,6 +40,7 @@ import { HistoryComponent } from './core/components/history/history.component';
   ],
   providers: [
     RevealService,
+    LoadConfigService,
     PreloadService,
     LoadingService,
     HistoryService,

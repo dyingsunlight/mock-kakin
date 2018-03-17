@@ -15,16 +15,16 @@
   </div>
   <div class="kakin-content">
     <app-gacha-banner
-      [banner]="uiConfig[mode].banner"
-      [title]="uiConfig[mode].bannerTitleImage"
-      [text]="uiConfig[mode].bannerText"
+      [banner]="state.UI[mode]['banner']"
+      [title]="state.UI[mode]['banner-title-image']"
+      [text]="state.UI[mode]['banner-text']"
       (click)="history.show(mode)"
     >
     </app-gacha-banner>
     <app-gacha-control-box
-      [text]="uiConfig[mode].itemTips"
-      [card]="uiConfig[mode].cardStyle"
-      [tip]="uiConfig[mode].itemDecoration"
+      [text]="state.UI[mode]['tip-text']"
+      [card]="state.UI[mode]['card']"
+      [tip]="state.UI[mode]['tip-image']"
       (update)="start($event)"
     ></app-gacha-control-box>
   </div>

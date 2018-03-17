@@ -3,6 +3,7 @@ import {PreloadService} from '../../core/service/preload.service';
 import {RevealService} from '../../core/service/reveal.service';
 import {LoadingService} from '../../core/service/loading.service';
 import { HistoryService } from '../../core/service/history.service';
+import { StateService } from '../../core/service/state.service';
 
 @Component({
   selector: 'app-precision-supplement',
@@ -14,7 +15,8 @@ export class PrecisionSupplementComponent implements OnInit {
   constructor(private preload: PreloadService,
               private reveal: RevealService,
               private loading: LoadingService,
-              public history: HistoryService
+              public history: HistoryService,
+              public state: StateService
               ) {
   }
 

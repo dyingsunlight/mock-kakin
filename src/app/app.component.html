@@ -18,7 +18,8 @@
       <app-image-in-button [icon]="'HCoin'" link="./precision/" [width]="100">
         精准
       </app-image-in-button>
-      <app-image-in-button [icon]="'HCoin'" link="./extension/" [width]="100">
+      <!-- 当配置文件未指定扩充界面配置时，隐藏此入口 -->
+      <app-image-in-button [icon]="'HCoin'" link="./extension/" [width]="100" *ngIf="state.UI && state.UI['extension']">
         扩充
       </app-image-in-button>
       <app-image-in-button [icon]="'HCoin'" link="./customize/" [width]="100">
@@ -39,7 +40,7 @@
     </div>
   </div>
   <div class="version">
-    2018.3.16 version: 1006
+    {{ state.version }}
   </div>
 
 </div>

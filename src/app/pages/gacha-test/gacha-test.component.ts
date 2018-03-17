@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { getStatistics, getStatisticsEx } from '../../gacha/index';
+import { getStatistics } from '../../gacha/index';
 import { prettyPrint } from '../../core/library/json-pretty';
 import { StateService } from '../../core/service/state.service';
 import { toArray } from '../../core/library/object';
@@ -50,12 +50,9 @@ export class GachaTestComponent implements OnInit {
   }
   start() {
     this.output = '';
-    const result = getStatisticsEx(this.times, this.current, this.state.enableProtection);
+    const result = getStatistics(this.times, this.current, this.state.enableProtection, this.state.possibility[this.current]);
     this.itemList = toArray(result.detail);
     this.sortBy('possibility');
     this.output = prettyPrint(result.category, '');
-  }
-  totally() {
-    alert(this.output);
   }
 }

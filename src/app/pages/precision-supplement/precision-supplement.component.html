@@ -1,16 +1,16 @@
 <div class="kakin">
   <div class="kakin-content">
     <app-gacha-banner
-      [banner]="'GachaPicTeslaCrossSakura'"
-      [title]="'precision-supplement'"
-      [text]="'精准补给。(点击此处查看补给记录)'"
+      [banner]="state.UI['precision']['banner']"
+      [title]="state.UI['precision']['banner-title-image']"
+      [text]="state.UI['precision']['banner-text']"
       (click)="history.show('precision')"
     >
     </app-gacha-banner>
     <app-gacha-control-box
-      [text]="'每十次补给必定会有4星或以上装备圣痕出现'"
-      [card]="'precision-card'"
-      [tip]="'weapon-tip'"
+      [text]="state.UI['precision']['tip-text']"
+      [card]="state.UI['precision']['card']"
+      [tip]="state.UI['precision']['tip-image']"
       (update)="start($event)"
     ></app-gacha-control-box>
   </div>

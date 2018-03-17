@@ -43,38 +43,10 @@
       </a>，内有更详细的注释。
     </span>
   </div>
-  <div class="section">
-    <span class="title">关于...</span>
-    <span>
-      Update on 2018.3.16:
-      <br><br>
-      论文初稿终于写完了。<br>
-      TODO：<br>
-      1. 修改补给配置为单独加载。不用每次更新补给内容都要重新编译，直接JSONP获取数据作为补给配置的来源。<br>
-      2. 添加多语言支持，一开始仅仅想做中文的而已，后来看到人修改了个英文版的，但这样我每次更新一次就要重新翻译一次，辛苦了！<br>
-      <br><br>
-    </span>
-    <span>
-      Update on 2018.3.9:
-      <br><br>
-      近期没有更多的计划了，忙着写毕业论文先。。。但是精准还是会跟着更新下去的。
-      <br>
-      服务器有调整, 旧的cdn地址虽然也能继续用，但不推荐。
-      <br>新的服务器地址
-      <br><br>
-      <a href="http://mockkakin.duapp.com">http://mockkakin.duapp.com</a>
-      <br><br>
-      PS: 一直不知道BAE原来这么便宜，这次换到上面去了，3块钱一个月还不限流量。
-      <br><br>
-    </span>
-    <span>
-      <br>
-      <br>
-      关于概率<br>
-      Update on 2018.3.1:<br>
-      游戏内部公布的是综合概率（即包括保底），即使算入保底带来的影响，也依然无法吻合和游戏内实际抽取的感受。。。
-      现在已经暂时大幅度降低模拟器的单抽出货概率，大概个人感觉比较接近游戏内的体验。
-      具体的概率依旧在探索中, 如果想要提高某些出货概率，请使用自定义配置功能来修改。
+  <div *ngFor="let section of state.about" class="section">
+    <span class="title">{{ section.title }}</span>
+    <span *ngFor="let body of section.body">
+      {{ body }}
     </span>
   </div>
   <div class="section">
