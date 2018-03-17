@@ -15,7 +15,7 @@
     </div>
   </div>
   <div class="items">
-    <table>
+    <table *ngIf="!categoryDisplayOn">
       <thead>
       <tr>
         <td (click)="sortBy('name')">{{ strRes.components.gachaTestPage.extra.name }}</td>
@@ -35,6 +35,24 @@
       </tr>
       </tbody>
     </table>
+    <table *ngIf="categoryDisplayOn">
+      <thead>
+      <tr>
+        <td>{{ strRes.components.gachaTestPage.extra.category }}</td>
+        <td>{{ strRes.components.gachaTestPage.extra.level }}</td>
+        <td>{{ strRes.components.gachaTestPage.extra.possibility }}</td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of categoryPossibilityList">
+        <td>{{ strRes.components.gachaTestPage.extra[item.type] }}</td>
+        <td>{{ strRes.components.gachaTestPage.extra[item.level] }}</td>
+        <td>{{ item.possibility }}</td>
+      </tr>
+      </tbody>
+    </table>
   </div>
   <button (click)="start()">{{ strRes.components.gachaTestPage.start }}</button>
+  <button *ngIf="!categoryDisplayOn" (click)="categoryDisplay()">{{ strRes.components.gachaTestPage.categoryDisplay }}</button>
+  <button *ngIf="categoryDisplayOn" (click)="closeCategoryDisplay()">{{ strRes.components.gachaTestPage.closeCategoryDisplay }}</button>
 </div>

@@ -57,6 +57,8 @@ const cn = {
       tipSelectAType: '选择一个配置的类别进行测试',
       tipSortAndGachaAmount: '执行抽取的十连次数 (点击标题可进行排序)',
       start: '开始抽取',
+      categoryDisplay: '分类概率',
+      closeCategoryDisplay: '关闭分类概率',
       extra: {
         name: '名称',
         level: '等级',
@@ -70,8 +72,8 @@ const cn = {
         category: '分类',
         '1': '1星',
         '2': '2星',
-        '4': '初始4星',
-        '3': '初始3星',
+        '4': '4星',
+        '3': '3星',
         '11': 'B级角色卡',
         '12': 'A级角色卡',
         '13': 'S级角色卡',
@@ -179,6 +181,7 @@ const en = {
       tipSelectAType: 'Select a category to test',
       tipSortAndGachaAmount: 'execute ten round gacha times (click title to sort)',
       start: 'start',
+      categoryDisplay: 'Display By Category',
       extra: {
         name: 'Name',
         level: 'Level',

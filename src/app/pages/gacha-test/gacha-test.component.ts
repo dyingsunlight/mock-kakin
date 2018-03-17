@@ -18,6 +18,8 @@ export class GachaTestComponent implements OnInit {
   strRes = strRes;
   itemList: GachaStatisticsItem[] = [];
   sortDirection = -1;
+  categoryDisplayOn = false;
+  categoryPossibilityList = [];
   constructor(
     protected state: StateService
   ) { }
@@ -35,8 +37,24 @@ export class GachaTestComponent implements OnInit {
     this.output = '';
     const result = getStatistics(this.times, this.current, this.state.enableProtection, this.state.possibility[this.current]);
     this.itemList = toArray(result.detail);
+    this.categoryPossibilityList = [];
+    Object.keys(result.category).forEach(category =>　{
+      Object.keys(result.category[category]).forEach(level => {
+        this.categoryPossibilityList.push({
+          type: category,
+          level: level,
+          possibility: result.category[category][level]
+        });
+      });
+    });
     console.log(result.category);
     this.sortBy('possibility');
     this.output = prettyPrint(result.category, '');
+  }
+  categoryDisplay() {
+    this.categoryDisplayOn = true;
+  }
+  closeCategoryDisplay() {
+    this.categoryDisplayOn = false;
   }
 }
