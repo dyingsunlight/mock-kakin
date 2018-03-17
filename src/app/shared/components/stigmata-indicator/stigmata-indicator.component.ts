@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { GachaItem } from '../../../gacha/interface/gacha-item';
-import { url } from '../../../config';
+import { url } from '../../../url-config';
 import { stigmataSlot } from '../../../gacha/enum/stigmata-slot';
 
 @Component({

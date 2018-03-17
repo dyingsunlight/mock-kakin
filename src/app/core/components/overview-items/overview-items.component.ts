@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges, OnDestroy } from '@angular/core';
 import { GachaItem } from '../../../gacha/interface/gacha-item';
 import { deepMigrate } from '../../library/object';
+import { strRes } from '../../../language';
 
 interface TrackableItem extends GachaItem {
   id: number;
@@ -18,6 +19,7 @@ export class OverviewItemsComponent implements OnInit, OnChanges, OnDestroy {
   trackableItems: TrackableItem[] = [];
   currentIndex = -1;
   timerID: number;
+  strRes = strRes;
   constructor() { }
   ngOnInit() {
     this.timerID = setInterval(this.putNextItem.bind(this), 300);

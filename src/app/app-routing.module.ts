@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: PagesRouting[0].component
+    redirectTo: PagesRouting[0].path
   },
   {
     path: '',

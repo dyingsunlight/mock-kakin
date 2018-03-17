@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { RevealService } from '../../service/reveal.service';
-import { url } from '../../../config';
+import { url } from '../../../url-config';
 import { GachaItem } from '../../../gacha/interface/gacha-item';
 import { sortItems } from '../../../gacha/library/util/item-sort';
 

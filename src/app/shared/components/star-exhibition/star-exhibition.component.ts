@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges, OnDestroy } from '@angular/core';
-import { url } from '../../../config';
+import { url } from '../../../url-config';
 
 /**
  * 使用从0-num的所有整数填充数组并且返回

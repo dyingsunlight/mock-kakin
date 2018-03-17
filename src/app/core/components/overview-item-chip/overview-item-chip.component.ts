@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, Output, OnChanges, SimpleChanges } from '@angular/core';
 import { GachaItem } from '../../../gacha/interface/gacha-item';
-import { url } from '../../../config';
 
 const typeText = {
   'stigmata': 'lv 1',

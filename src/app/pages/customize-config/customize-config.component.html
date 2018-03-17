@@ -1,12 +1,12 @@
 <div class="customize">
   <select [(ngModel)]="current" name="supplement-type" (change)="loadConfig(current)">
-    <option  [attr.value]="'standard'">标配补给</option>
-    <option  [attr.value]="'equipment'">装备补给</option>
-    <option  [attr.value]="'precision'">精准补给</option>
-    <option  [attr.value]="'extension'">扩充补给</option>
+    <option  [attr.value]="'standard'">{{ strRes.supplementNames.standard }}</option>
+    <option  [attr.value]="'equipment'">{{ strRes.supplementNames.equipment }}</option>
+    <option  [attr.value]="'precision'">{{ strRes.supplementNames.precision }}</option>
+    <option  [attr.value]="'extension'">{{ strRes.supplementNames.extension }}</option>
   </select>
   <textarea [(ngModel)]="text">
   </textarea>
-  <button (click)="confirm()">保存</button>
-  <button (click)="showPossibility()">统计概率</button>
+  <button (click)="confirm()">{{ strRes.components.customizeConfigPage.save }}</button>
+  <button (click)="showPossibility()">{{ strRes.components.customizeConfigPage.showStatistics }}</button>
 </div>

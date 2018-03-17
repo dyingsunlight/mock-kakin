@@ -6,6 +6,7 @@ import { PreloadService } from '../../core/service/preload.service';
 import { LoadingService } from '../../core/service/loading.service';
 import { HistoryService } from '../../core/service/history.service';
 import { StateService } from '../../core/service/state.service';
+import { strRes } from '../../language';
 
 @Component({
   selector: 'app-standrad-supplement',
@@ -40,8 +41,8 @@ export class StandradSupplementComponent implements OnInit {
     }
   }
   start(times: number) {
-    this.loading.show('加载资源中...', `0/${times * 4}`);
-    this.preload.gacha(times , this.mode, ({complete, total}) => this.loading.update('加载资源中...', `${complete}/${total}`))
+    this.loading.show(strRes.loading.fullTip, `0/${times * 4}`);
+    this.preload.gacha(times , this.mode, ({complete, total}) => this.loading.update(strRes.loading.fullTip, `${complete}/${total}`))
       .subscribe(list => {
       this.loading.close();
       this.currentList = list;

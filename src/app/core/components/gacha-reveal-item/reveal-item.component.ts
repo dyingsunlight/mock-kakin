@@ -1,6 +1,7 @@
 import {Component, OnInit, Input, Output, OnChanges, SimpleChanges, EventEmitter, OnDestroy} from '@angular/core';
 import { GachaItem } from '../../../gacha/interface/gacha-item';
-import { url } from '../../../config';
+import { url } from '../../../url-config';
+import { strRes } from '../../../language';
 
 const rankTitle = {
   1: `${url.gacha}/effect/rank-2.png`,
@@ -9,14 +10,6 @@ const rankTitle = {
   4: `${url.gacha}/effect/rank-4.png`,
 };
 
-
-const typeText = {
-  'stigmata': '圣痕',
-  'weapon': '武器',
-  'equipment': '装备/材料',
-  'fragment': '碎片',
-  'character': '角色卡'
-};
 @Component({
   selector: 'app-reveal-item',
   templateUrl: './reveal-item.component.html',
@@ -29,7 +22,7 @@ export class GachaRevealItemComponent implements OnInit, OnDestroy, OnChanges {
   weaveEffectImagePath = '';
   weaveFrameEffectImagePath = '';
   timerID: number;
-  typeText = typeText;
+  typeText = strRes.commons;
   itemLevel = 2;
   maxItemLevel = 3;
   forceUpdateStar = 0;
@@ -65,7 +58,7 @@ export class GachaRevealItemComponent implements OnInit, OnDestroy, OnChanges {
     this.forceUpdateStar ++;
   }
   updateRankTitle() {
-    this.rankTitle = this.item.level < 4 ? rankTitle[this.item.level] :  rankTitle[4]
+    this.rankTitle = this.item.level < 4 ? rankTitle[this.item.level] :  rankTitle[4];
   }
   imageLoadComplete() {
     this.isImageLoading = false;

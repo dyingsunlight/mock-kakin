@@ -3,7 +3,7 @@ import { weapon } from '../../../resources/weapon-names';
 import { character } from '../../../resources/character-names';
 import { equipment } from '../../../resources/equipment-names';
 import { stigmata } from '../../../resources/stigmata-names';
-import { url } from '../../../../config';
+import { url } from '../../../../url-config';
 import { GachaPreProcessParams } from '../../../interface/gacha-pre-process';
 import { stigmataSlot } from '../../../enum/stigmata-slot';
 

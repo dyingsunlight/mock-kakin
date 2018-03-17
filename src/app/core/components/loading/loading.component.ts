@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoadingService } from '../../service/loading.service';
-import { url } from '../../../config';
+import { url } from '../../../url-config';
 
 @Component({
   selector: 'app-loading',

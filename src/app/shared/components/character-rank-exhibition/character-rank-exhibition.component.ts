@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { url } from '../../../config';
+import { url } from '../../../url-config';
 const rankFile = {
   11: 'b',
   12: 'a',

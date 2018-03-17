@@ -1,6 +1,7 @@
-import { url } from './config';
+import { url } from './url-config';
 import { Component, OnInit } from '@angular/core';
 import { StateService } from './core/service/state.service';
+import { strRes } from './language';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ import { StateService } from './core/service/state.service';
 })
 export class AppComponent implements OnInit {
   url = url;
+  strRes = strRes;
   constructor(
     public state: StateService,
   ) {}

@@ -199,7 +199,7 @@
       "possibility": [
         {
           "name": "s角色卡",
-          "factor": 37.5,
+          "factor": 50,
           "type": "character",
           "contents": [
             "月光", "鬼凯", "次元",

@@ -1,16 +1,16 @@
 <div class="gacha-test">
   <div class="control">
     <div class="input-wrapper">
-      <label for="config-type">选择一个配置的类别进行测试</label>
+      <label for="config-type">{{ strRes.components.gachaTestPage.tipSelectAType }}</label>
       <select [(ngModel)]="current" id="config-type">
-        <option  [attr.value]="'standard'">标配补给</option>
-        <option  [attr.value]="'equipment'">装备补给</option>
-        <option  [attr.value]="'precision'">精准补给</option>
-        <option  [attr.value]="'extension'">扩充补给</option>
+        <option  [attr.value]="'standard'">{{ strRes.supplementNames.standard }}</option>
+        <option  [attr.value]="'equipment'">{{ strRes.supplementNames.equipment }}</option>
+        <option  [attr.value]="'precision'">{{ strRes.supplementNames.precision }}</option>
+        <option  [attr.value]="'extension'">{{ strRes.supplementNames.extension }}</option>
       </select>
     </div>
     <div class="input-wrapper">
-      <label for="gacha-amount">执行抽取的十连次数 (点击标题可进行排序)</label>
+      <label for="gacha-amount">{{ strRes.components.gachaTestPage.tipSortAndGachaAmount }}</label>
       <input id="gacha-amount" [(ngModel)]="times" />
     </div>
   </div>
@@ -18,23 +18,23 @@
     <table>
       <thead>
       <tr>
-        <td (click)="sortBy('name')">名称</td>
-        <td (click)="sortBy('type')">类型</td>
-        <td (click)="sortBy('level')">等级</td>
-        <td (click)="sortBy('amount')">次数</td>
-        <td (click)="sortBy('possibility')">抽取概率</td>
+        <td (click)="sortBy('name')">{{ strRes.components.gachaTestPage.extra.name }}</td>
+        <td (click)="sortBy('type')">{{ strRes.components.gachaTestPage.extra.category }}</td>
+        <td (click)="sortBy('level')">{{ strRes.components.gachaTestPage.extra.level }}</td>
+        <td (click)="sortBy('amount')">{{ strRes.components.gachaTestPage.extra.times }}</td>
+        <td (click)="sortBy('possibility')">{{ strRes.components.gachaTestPage.extra.possibility }}</td>
       </tr>
       </thead>
       <tbody>
       <tr *ngFor="let item of itemList">
         <td>{{ item.name }}</td>
-        <td>{{ typeText[item.type] }}</td>
-        <td>{{ typeText[item.level] }}</td>
+        <td>{{ strRes.components.gachaTestPage.extra[item.type] }}</td>
+        <td>{{ strRes.components.gachaTestPage.extra[item.level] }}</td>
         <td>{{ item.amount }}</td>
         <td>{{ item.possibility }}%</td>
       </tr>
       </tbody>
     </table>
   </div>
-  <button (click)="start()">开始抽取</button>
+  <button (click)="start()">{{ strRes.components.gachaTestPage.start }}</button>
 </div>

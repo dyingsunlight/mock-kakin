@@ -1,6 +1,6 @@
 <div class="screen-rotation-tip">
   <p>
-    请将手机横屏以获得最佳的显示效果！
+    {{ strRes.root.rotationTip }}
   </p>
 </div>
 <app-history></app-history>
@@ -13,28 +13,28 @@
     </div>
     <div class="right-navigation">
       <app-image-in-button   [icon]="'HCoin'" link="./standard/" [width]="100">
-        标配
+        {{ strRes.root.navigation.standard }}
       </app-image-in-button>
       <app-image-in-button [icon]="'HCoin'" link="./precision/" [width]="100">
-        精准
+        {{ strRes.root.navigation.precision }}
       </app-image-in-button>
       <!-- 当配置文件未指定扩充界面配置时，隐藏此入口 -->
       <app-image-in-button [icon]="'HCoin'" link="./extension/" [width]="100" *ngIf="state.UI && state.UI['extension']">
-        扩充
+        {{ strRes.root.navigation.extension }}
       </app-image-in-button>
       <app-image-in-button [icon]="'HCoin'" link="./customize/" [width]="100">
-        配置
+        {{ strRes.root.navigation.customize }}
       </app-image-in-button>
       <app-image-in-button [icon]="'HCoin'" link="./test/" [width]="100">
-        测试
+        {{ strRes.root.navigation.test }}
       </app-image-in-button>
       <app-image-in-button [icon]="'HCoin'" link="/about/" [width]="100">
-        关于
+        {{ strRes.root.navigation.about }}
       </app-image-in-button>
       <div class="options">
         <div class="input-wrapper">
           <input type="checkbox" (change)="updateProtection($event.target.checked)" [checked]="state.enableProtection" id="enableProtection">
-          <label for="enableProtection">开启保底</label>
+          <label for="enableProtection">{{ strRes.root.gachaProtection }}</label>
         </div>
       </div>
     </div>

@@ -1,5 +1,7 @@
 import {Component, OnInit, Input, Output, OnChanges, SimpleChanges, EventEmitter} from '@angular/core';
-import { url } from '../../../config';
+import { url } from '../../../url-config';
+import { strRes } from '../../../language';
+
 @Component({
   selector: 'app-gacha-control-box',
   templateUrl: './gacha-control-box.component.html',
@@ -11,6 +13,7 @@ export class GachaControlBoxComponent implements OnInit, OnChanges {
   @Input() card = '';
   @Input() basePath = url.icons;
   @Output() update = new EventEmitter<number>();
+  strRes = strRes
   cardPath = '';
   constructor() { }
   ngOnInit() {}

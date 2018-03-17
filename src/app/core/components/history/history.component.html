@@ -2,13 +2,13 @@
   <div class="body">
     <div class="title">
       <span>
-        个人 {{ dictionary[mode] }} 记录
+        {{ strRes.components.history.personal}} {{ strRes.supplementNames[mode] }} {{ strRes.components.history.record}}
       </span>
     </div>
     <ul>
       <li *ngFor="let item of list"
           [class.high-level]="item.level >10 || ((item.type === 'stigmata' || item.type === 'weapon') && item.level === 4)">
-        {{ typeText[item.type] }} {{ item.name + item.extra.suffix }}
+        {{ strRes.commons[item.type] }} {{ item.name + item.extra.suffix }}
       </li>
     </ul>
   </div>

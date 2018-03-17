@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { url } from '../../../config';
+import { url } from '../../../url-config';
 
 @Component({
   selector: 'app-gacha-type-selection',

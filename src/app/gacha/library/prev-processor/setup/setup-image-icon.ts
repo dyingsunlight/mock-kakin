@@ -1,4 +1,4 @@
-import { url } from '../../../../config';
+import { url } from '../../../../url-config';
 import { GachaItem } from '../../../interface/gacha-item';
 import { GachaPreProcessParams } from '../../../interface/gacha-pre-process';
 

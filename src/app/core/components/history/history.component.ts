@@ -2,20 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { StateService } from '../../service/state.service';
 import { HistoryService } from '../../service/history.service';
 import {GachaItem} from '../../../gacha/interface/gacha-item';
-
-const dictionary = {
-  'precision': '精准补给',
-  'standard': '标配补给',
-  'equipment': '装备补给',
-};
-
-const typeText = {
-  'character': '[角色] ',
-  'stigmata': '[圣痕] ',
-  'weapon': '[武器] ',
-  'fragment': '[碎片] ',
-  'equipment': '[材料] '
-};
+import { strRes } from '../../../language';
 
 @Component({
   selector: 'app-history',
@@ -25,8 +12,9 @@ const typeText = {
 export class HistoryComponent implements OnInit {
   list: GachaItem[] = [];
   isActive = false;
-  typeText = typeText;
-  dictionary = dictionary;
+  typeText = strRes.commons;
+  dictionary = strRes.supplementNames;
+  strRes = strRes;
   mode = '';
   constructor(
     protected state: StateService,

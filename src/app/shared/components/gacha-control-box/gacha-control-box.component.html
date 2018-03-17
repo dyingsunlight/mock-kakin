@@ -1,7 +1,7 @@
 <div class="gacha-control-box">
   <div class="box icon-one-time">
     <div class="item-tip">
-      <h1>补给获得物品的数量</h1>
+      <h1>{{ strRes.components.gachaControlBox.gainTip }}</h1>
     </div>
     <div class="item-amount">
       <span class="icon-unknow-mark">x 2</span>
@@ -11,7 +11,7 @@
     </div>
     <div class="item-control">
       <div class="button" (click)="trigger(1)">
-        <span class="text" [ngStyle]="{'background-image': cardPath}">一回补给</span>
+        <span class="text" [ngStyle]="{'background-image': cardPath}">{{ strRes.components.gachaControlBox.oneRound }}</span>
         <app-gacha-card-indicator
           class="amount"
           [card] = "card"
@@ -23,7 +23,7 @@
   <div class="box icon-ten-times">
     <img class="right-tip" [src]="tip">
     <div class="item-tip">
-      <h1>补给获得物品的数量</h1>
+      <h1>{{ strRes.components.gachaControlBox.gainTip }}</h1>
     </div>
     <div class="item-amount">
       <span class="icon-unknow-mark">x 20</span>
@@ -33,7 +33,7 @@
     </div>
     <div class="item-control">
       <div class="button" (click)="trigger(10)">
-        <span class="text" [ngStyle]="{'background-image': cardPath}">十回补给</span>
+        <span class="text" [ngStyle]="{'background-image': cardPath}">{{ strRes.components.gachaControlBox.tenRound }}</span>
         <app-gacha-card-indicator
           class="amount"
           [card] = "card"

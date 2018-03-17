@@ -3,6 +3,7 @@ import { prettyPrint } from '../../core/library/json-pretty';
 import { Possibility } from '../../gacha/interface/possibility';
 import { deepMigrate } from '../../core/library/object';
 import { StateService } from '../../core/service/state.service';
+import { strRes } from '../../language';
 
 @Component({
   selector: 'app-customize-config',
@@ -12,6 +13,7 @@ import { StateService } from '../../core/service/state.service';
 export class CustomizeConfigComponent implements OnInit {
   current = 'standard';
   text = '';
+  strRes = strRes;
   constructor(
     private state: StateService
   ) { }
@@ -31,7 +33,7 @@ export class CustomizeConfigComponent implements OnInit {
     const report: {[key: string]: string} = {};
     const total = p.reduce( (prev, item) => item.factor + prev, 0);
     p.forEach( item => report[item.name] = (item.factor / total * 100).toFixed(2) + '%');
-    alert('以下为单抽概率，不包含保底\r' + prettyPrint(report, ' '));
+    alert(strRes.components.customizeConfigPage.statisticsTitle + prettyPrint(report, ' '));
   }
 }
 
