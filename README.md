@@ -24,7 +24,7 @@ Mock-Kakin 可部署于静态服务器, 不需要动态的处理支持。
 3. ``npm run start`` 启动开发者模式，可以直接开发并预览。
 4. ``npm run build`` 执行默认发布，输出文件夹为 ``default``，应用入口为
 ``app-index.html``。如需部署在特定路径或者遇见资源路径错误的问题，请参见 ``package.json`` 中的 ``build-for-github`` 构建设置，配置好基础链接就可以。
-5. ``可选``关于启用 preloader ，复制 ``preloader`` 文件夹内的所有文件到 ``app-index.html`` 同目录中
+5. ``可选``关于启用 [Preloader](https://github.com/dyingsunlight/preloader) ，复制 ``preloader`` 文件夹内的所有文件到 ``app-index.html`` 同目录中
 ，使用``index.html``作为应用入口即可。  
 
 **如果有部署疑问，或者遭遇问题，可以请提交issue**
@@ -34,7 +34,7 @@ Mock-Kakin 可部署于静态服务器, 不需要动态的处理支持。
 2. 由于使用的图片资源较多，访问时会产生大量的请求数。
 推荐在可能的情况时，为所有图片的Cache-Control设置尽可能长的max-age(图片资源几乎不会变动)。
 能够有效的减少请求数量。
-3. 推荐启用Preloader，能够有效提升加载时的用户体验。
+3. 推荐启用 [Preloader](https://github.com/dyingsunlight/preloader)，能够有效提升加载时的用户体验。
 
 ## 概率算法：
 

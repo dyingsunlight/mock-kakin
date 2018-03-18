@@ -41,7 +41,7 @@
       document.querySelector('.progress .text').innerText = '加载资源中... ' + String(status.urls.length - status.reminds.length) + '/' + String(status.urls.length)
       document.querySelector('.progress .bar .filled').style.width = ((status.urls.length - status.reminds.length) / status.urls.length * 100).toFixed(1) + '%'
       if (status.isSucceed && status.suffix === 'html' && status.responseText) {
-        preloader.addUrls(Preloader.extractor(status.responseText))
+        preloader.addURLs(Preloader.extractor(status.responseText))
       }
     }
     preloader.onCompleted = function() {
