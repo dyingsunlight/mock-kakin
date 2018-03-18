@@ -47,7 +47,6 @@ export class GachaTestComponent implements OnInit {
         });
       });
     });
-    console.log(result.category);
     this.sortBy('possibility');
     this.output = prettyPrint(result.category, '');
   }

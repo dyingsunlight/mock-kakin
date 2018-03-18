@@ -6,7 +6,7 @@
       "possibility": [
         {
           "name": "up的4星圣痕",
-          "factor": 7,
+          "factor": 72,
           "type": "stigmata",
           "contents": [
             "特斯拉乐队"
@@ -14,7 +14,7 @@
         },
         {
           "name": "非up的4星圣痕",
-          "factor": 7,
+          "factor": 72,
 
           "type": "stigmata",
           "contents": [
@@ -23,7 +23,7 @@
         },
         {
           "name": "3星圣痕",
-          "factor": 328,
+          "factor": 3370,
           "type": "stigmata",
           "contents": [
             "里纳耳多", "时雨绮罗", "奥吉尔",
@@ -38,7 +38,7 @@
         },
         {
           "name": "up的4星武器",
-          "factor": 4.5,
+          "factor": 48,
           "type": "weapon",
           "contents": [
             "樱花的誓约"
@@ -46,7 +46,7 @@
         },
         {
           "name": "非up的4星武器",
-          "factor": 4.5,
+          "factor": 48,
           "type": "weapon",
           "contents": [
             "超电磁炮", "虚无之刃", "蚩尤巨炮", "犹大的誓约",
@@ -55,7 +55,7 @@
         },
         {
           "name": "3星武器",
-          "factor": 109,
+          "factor": 1124,
           "type": "weapon",
           "contents": [
             "水妖精I型", "火妖精I型", "水妖精II型", "火妖精II型", "苗刀·雷妖", "苗刀·电魂", "脉冲太刀17式", "脉冲太刀19式", "马尔夫科A", "马尔夫科C",
@@ -68,7 +68,7 @@
         },
         {
           "name": "通用进化材料",
-          "factor": 166,
+          "factor": 1700,
           "type": "equipment",
           "contents": [
             "超合金护盾", "断裂的刀柄",
@@ -78,7 +78,7 @@
         },
         {
           "name": "装备经验",
-          "factor": 166,
+          "factor": 1700,
           "type": "equipment",
           "contents": [
             "灵魂碎片", "双子灵魂碎片",
@@ -89,7 +89,7 @@
         },
         {
           "name": "钱",
-          "factor": 82,
+          "factor": 854,
           "type": "equipment",
           "contents": [
             "吼里宝藏", "吼美宝藏", "吼咪宝藏"
@@ -103,7 +103,7 @@
       "possibility": [
         {
           "name": "S级女武神",
-          "factor": 75,
+          "factor": 88,
           "type": "character",
           "contents": [
             "神恩"
@@ -111,7 +111,7 @@
         },
         {
           "name": "A级女武神-德丽莎",
-          "factor": 450,
+          "factor": 525,
           "type": "character",
           "contents": [
             "誓约",
@@ -120,7 +120,7 @@
         },
         {
           "name": "A级女武神-其他",
-          "factor": 225,
+          "factor": 265,
           "type": "character",
           "contents": [
             "强袭",
@@ -137,18 +137,15 @@
         },
         {
           "name": "a女武神碎片-德丽莎",
-          "factor": 750,
+          "factor": 1500,
           "type": "fragment",
           "contents": [
-            "游侠", "圣女", "影舞",
-            "强袭", "山吹", "雪地",
-            "凯旋", "深红", "誓约",
-            "火舞", "浮华"
+             "誓约", "火舞"
           ]
         },
         {
           "name": "a女武神碎片-其它",
-          "factor": 225,
+          "factor": 550,
           "type": "fragment",
           "contents": [
             "强袭",  "深红"
@@ -165,7 +162,7 @@
         },
         {
           "name": "低星装备材料",
-          "factor": 1266,
+          "factor": 1268,
           "type": "equipment",
           "contents": [
             "灵魂碎片", "双子灵魂碎片",
@@ -176,7 +173,7 @@
         },
         {
           "name": "角色经验",
-          "factor": 1266,
+          "factor": 1268,
           "type": "equipment",
           "contents": [
             "高级生物芯片", "高级机械芯片",
@@ -186,7 +183,7 @@
         },
         {
           "name": "钱",
-          "factor": 1266,
+          "factor": 1268,
           "type": "equipment",
           "contents": [
             "吼里宝藏", "吼美宝藏", "吼咪宝藏"
@@ -200,7 +197,7 @@
       "possibility": [
         {
           "name": "s角色卡",
-          "factor": 70,
+          "factor": 88.5,
           "type": "character",
           "contents": [
             "月光", "鬼凯", "次元",
@@ -210,7 +207,7 @@
         },
         {
           "name": "a级女武神",
-          "factor": 700,
+          "factor": 800,
           "type": "character",
           "contents": [
             "游侠", "圣女", "影舞",
@@ -221,7 +218,7 @@
         },
         {
           "name": "b级女武神",
-          "factor": 500,
+          "factor": 550,
           "type": "character",
           "contents": [
             "疾风", "白练", "绯红", "战车"
@@ -328,7 +325,7 @@
       "possibility": [
         {
           "name": "4星圣痕",
-          "factor": 30,
+          "factor": 460,
           "type": "stigmata",
           "contents": [
             "埃及艳后", "姬轩辕",
@@ -343,7 +340,7 @@
         },
         {
           "name": "3星圣痕",
-          "factor": 322,
+          "factor": 3369,
           "type": "stigmata",
           "contents": [
             "里纳耳多", "时雨绮罗", "奥吉尔",
@@ -358,19 +355,20 @@
         },
         {
           "name": "4星武器",
-          "factor": 15,
+          "factor": 310,
           "type": "weapon",
           "contents": [
             "百手巨人初型", "圣遗物5th", "重装小兔19C",
             "核心聚能跑Delta", "尤弥尔之腕", "蚩尤巨炮",
             "量子毁灭者II型", "日炎大剑", "极光斩舰刀",
             "尼德霍格翼爪", "圣遗物2nd", "索尔之锤", "超电磁炮",
-            "光与影", "烈焰毁灭者"
+            "光与影", "烈焰毁灭者", "圣遗物3rd", "雷切", "磁暴·斩", "虚无之刃",
+            "灵刀·樱吹雪", "仿灵刀·冰昙天", "火刀真田", "仿犹大·血之拥抱"
           ]
         },
         {
           "name": "3星武器",
-          "factor": 106,
+          "factor": 1123,
           "type": "weapon",
           "contents": [
             "水妖精I型", "火妖精I型", "水妖精II型", "火妖精II型", "苗刀·雷妖", "苗刀·电魂", "脉冲太刀17式", "脉冲太刀19式", "马尔夫科A", "马尔夫科C",
@@ -383,7 +381,7 @@
         },
         {
           "name": "进化材料",
-          "factor": 160,
+          "factor": 1708,
           "type": "equipment",
           "contents": [
             "超合金护盾", "断裂的刀柄",
@@ -393,7 +391,7 @@
         },
         {
           "name": "装备经验",
-          "factor": 160,
+          "factor": 1708,
           "type": "equipment",
 
           "contents": [
@@ -405,7 +403,7 @@
         },
         {
           "name": "钱",
-          "factor": 80,
+          "factor": 853,
           "type": "equipment",
           "contents": [
             "吼里宝藏", "吼美宝藏", "吼咪宝藏"
@@ -455,10 +453,14 @@
         "title": "Update on 2018.3.17"
       },
       {
-        "title": "关于概率:",
+        "title": "关于概率及其算法:",
         "body": [
           "游戏内部公布的是综合概率（即包括保底），目前根据开启批量抽取测试进行了调整，已经非常接近实际的抽取情况。",
-          "。"
+          "概率算法：",
+          "1. 保底基础出货概率 由于保底机制的存在，十连必定出货。因此设定 基础出货概率为 10%",
+          "2. 保底出货概率 = A级角色卡 + S级角色卡 或者是 4星武器 + 4星圣痕",
+          "3. 单抽出货概率 = 保底出货概率 - 保底基础出货概率",
+          "4. 按照不同出货类型在保底出货下的概率，按照比例划分 单抽出货概率"
         ]
       }
     ]
