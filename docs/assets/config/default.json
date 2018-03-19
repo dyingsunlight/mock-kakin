@@ -22,6 +22,23 @@
           ]
         },
         {
+          "name": "up的4星武器",
+          "factor": 48,
+          "type": "weapon",
+          "contents": [
+            "犹大的誓约"
+          ]
+        },
+        {
+          "name": "非up的4星武器",
+          "factor": 48,
+          "type": "weapon",
+          "contents": [
+            "超电磁炮", "虚无之刃", "蚩尤巨炮", "樱花的誓约",
+            "断光之怒亚达"
+          ]
+        },
+        {
           "name": "3星圣痕",
           "factor": 3370,
           "type": "stigmata",
@@ -34,23 +51,6 @@
             "露西亚",
             "薇欧拉",
             "维多利亚"
-          ]
-        },
-        {
-          "name": "up的4星武器",
-          "factor": 48,
-          "type": "weapon",
-          "contents": [
-            "樱花的誓约"
-          ]
-        },
-        {
-          "name": "非up的4星武器",
-          "factor": 48,
-          "type": "weapon",
-          "contents": [
-            "超电磁炮", "虚无之刃", "蚩尤巨炮", "犹大的誓约",
-            "断光之怒亚达"
           ]
         },
         {
@@ -90,100 +90,6 @@
         {
           "name": "钱",
           "factor": 854,
-          "type": "equipment",
-          "contents": [
-            "吼里宝藏", "吼美宝藏", "吼咪宝藏"
-          ]
-        }
-      ]
-    },
-    "extension":{
-      "name": "扩充补给",
-      "factor": 1,
-      "possibility": [
-        {
-          "name": "S级女武神",
-          "factor": 88,
-          "type": "character",
-          "contents": [
-            "神恩"
-          ]
-        },
-        {
-          "name": "A级女武神-德丽莎",
-          "factor": 525,
-          "type": "character",
-          "contents": [
-            "誓约",
-            "火舞"
-          ]
-        },
-        {
-          "name": "A级女武神-其他",
-          "factor": 265,
-          "type": "character",
-          "contents": [
-            "强袭",
-            "深红"
-          ]
-        },
-        {
-          "name": "s女武神碎片",
-          "factor": 250,
-          "type": "fragment",
-          "contents": [
-            "神恩"
-          ]
-        },
-        {
-          "name": "a女武神碎片-德丽莎",
-          "factor": 1500,
-          "type": "fragment",
-          "contents": [
-             "誓约", "火舞"
-          ]
-        },
-        {
-          "name": "a女武神碎片-其它",
-          "factor": 550,
-          "type": "fragment",
-          "contents": [
-            "强袭",  "深红"
-          ]
-        },
-        {
-          "name": "技能材料",
-          "factor": 2500,
-          "type": "equipment",
-          "contents": [
-            "初级技能材料",
-            "高级技能材料"
-          ]
-        },
-        {
-          "name": "低星装备材料",
-          "factor": 1268,
-          "type": "equipment",
-          "contents": [
-            "灵魂碎片", "双子灵魂碎片",
-            "灵魂结晶", "双子灵魂结晶",
-            "以太碎片", "双子以太碎片",
-            "以太结晶", "双子以太结晶"
-          ]
-        },
-        {
-          "name": "角色经验",
-          "factor": 1268,
-          "type": "equipment",
-          "contents": [
-            "高级生物芯片", "高级机械芯片",
-            "高级异能芯片", "特级生物芯片",
-            "特级机械芯片", "特级异能芯片"
-          ]
-        },
-        {
-          "name": "钱",
-          "factor": 1268,
           "type": "equipment",
           "contents": [
             "吼里宝藏", "吼美宝藏", "吼咪宝藏"
@@ -410,13 +316,107 @@
           ]
         }
       ]
+    },
+    "extension":{
+      "name": "扩充补给",
+      "factor": 1,
+      "possibility": [
+        {
+          "name": "S级女武神",
+          "factor": 88,
+          "type": "character",
+          "contents": [
+            "神恩"
+          ]
+        },
+        {
+          "name": "A级女武神-德丽莎",
+          "factor": 525,
+          "type": "character",
+          "contents": [
+            "誓约",
+            "火舞"
+          ]
+        },
+        {
+          "name": "A级女武神-其他",
+          "factor": 265,
+          "type": "character",
+          "contents": [
+            "强袭",
+            "深红"
+          ]
+        },
+        {
+          "name": "s女武神碎片",
+          "factor": 250,
+          "type": "fragment",
+          "contents": [
+            "神恩"
+          ]
+        },
+        {
+          "name": "a女武神碎片-德丽莎",
+          "factor": 1500,
+          "type": "fragment",
+          "contents": [
+            "誓约", "火舞"
+          ]
+        },
+        {
+          "name": "a女武神碎片-其它",
+          "factor": 550,
+          "type": "fragment",
+          "contents": [
+            "强袭",  "深红"
+          ]
+        },
+        {
+          "name": "技能材料",
+          "factor": 2500,
+          "type": "equipment",
+          "contents": [
+            "初级技能材料",
+            "高级技能材料"
+          ]
+        },
+        {
+          "name": "低星装备材料",
+          "factor": 1268,
+          "type": "equipment",
+          "contents": [
+            "灵魂碎片", "双子灵魂碎片",
+            "灵魂结晶", "双子灵魂结晶",
+            "以太碎片", "双子以太碎片",
+            "以太结晶", "双子以太结晶"
+          ]
+        },
+        {
+          "name": "角色经验",
+          "factor": 1268,
+          "type": "equipment",
+          "contents": [
+            "高级生物芯片", "高级机械芯片",
+            "高级异能芯片", "特级生物芯片",
+            "特级机械芯片", "特级异能芯片"
+          ]
+        },
+        {
+          "name": "钱",
+          "factor": 1268,
+          "type": "equipment",
+          "contents": [
+            "吼里宝藏", "吼美宝藏", "吼咪宝藏"
+          ]
+        }
+      ]
     }
   },
   "user-interface": {
-    "version": "补给配置版本：2018.3.16",
+    "version": "补给配置版本：2018.3.19",
     "supplement": {
       "precision": {
-        "banner": "GachaPicTeslaCrossSakura",
+        "banner": "GachaPicTeslaCrossJudas",
         "banner-text": "精准补给。(点击此处查看补给记录)",
         "banner-title-image": "precision-supplement",
         "tip-text": "每十次补给必定会有4星或以上装备圣痕出现",
