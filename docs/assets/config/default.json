@@ -326,7 +326,7 @@
           "factor": 88,
           "type": "character",
           "contents": [
-            "神恩"
+            "紫苑"
           ]
         },
         {
@@ -413,7 +413,7 @@
     }
   },
   "user-interface": {
-    "version": "补给配置版本：2018.3.19",
+    "version": "补给配置版本：2018.3.22 紫苑/犹大",
     "supplement": {
       "precision": {
         "banner": "GachaPicTeslaCrossJudas",
@@ -440,7 +440,7 @@
         "card": "equipment-card"
       },
       "extension": {
-        "banner": "GachaPicAddition18TheresaBirthday01",
+        "banner": "GachaPicAddition18TheresaBirthday02",
         "banner-text": "2018.3.16 神恩扩充补给。(点击此处查看补给记录)",
         "banner-title-image": "event-supplement",
         "tip-text": "每十次补给必定会有A级或以上女武神出现",
