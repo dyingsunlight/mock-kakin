@@ -26,7 +26,7 @@
           "factor": 48,
           "type": "weapon",
           "contents": [
-            "百鸟问天"
+            "雷切"
           ]
         },
         {
@@ -34,7 +34,7 @@
           "factor": 48,
           "type": "weapon",
           "contents": [
-            "能量跃迁者", "雷切", "妖刀·赤染樱", "圣遗物5th",
+            "能量跃迁者", "百鸟问天", "妖刀·赤染樱", "圣遗物5th",
             "圣遗物7th", "圣遗物7th"
           ]
         },
@@ -413,10 +413,10 @@
     }
   },
   "user-interface": {
-    "version": "补给配置版本：2018.3.23 紫苑/人偶师/百鸟",
+    "version": "补给配置版本：2018.3.26 紫苑/人偶师/雷切",
     "supplement": {
       "precision": {
-        "banner": "GachaPicDollmakerFistBirds",
+        "banner": "GachaPicDollmakerKatanaRaikiri",
         "banner-text": "精准补给。(点击此处查看补给记录)",
         "banner-title-image": "precision-supplement",
         "tip-text": "每十次补给必定会有4星或以上装备圣痕出现",
