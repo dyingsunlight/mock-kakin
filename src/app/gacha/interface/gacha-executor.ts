@@ -9,5 +9,7 @@ export interface GachaExecutorParams {
   times: number;
   // 禁用保底机制
   disableProtection ?: boolean;
+  // 扩充保底机制
+  disableExtensionProtection ?: boolean;
   disableAppendant?: boolean;
 }

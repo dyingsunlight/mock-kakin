@@ -1,6 +1,7 @@
 import { GachaItem } from '../interface/gacha-item';
 import { GachaPreProcessParams } from '../interface/gacha-pre-process';
 
+import { ExtensionModeSpecialRule } from './prev-processor/extension-mode-rule';
 import { PrecisionModeSpecialRule } from './prev-processor/precision-mode-rule';
 import { SetupfilePath } from './prev-processor/setup/setup-file';
 import { SetupItemLevel } from './prev-processor/setup/setup-level';
@@ -22,8 +23,10 @@ const processors = [
   SetupIconAndImagePath,
   // 精准模式特殊规则（必出武器或者圣痕）
   PrecisionModeSpecialRule,
+  // 扩充百连必出S，此规则须在基础保底前
+  ExtensionModeSpecialRule,
   // 每10连进行保底
-  GachaProtectionCounter
+  GachaProtectionCounter,
 ];
 
 /**

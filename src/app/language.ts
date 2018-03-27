@@ -25,6 +25,7 @@ const cn = {
   root: {
     rotationTip: '请将手机横屏以获得最佳的显示效果！',
     gachaProtection: '开启保底',
+    extensionHundredProtection: '扩百必S',
     navigation: {
       precision: '精准',
       standard: '标配',
@@ -127,7 +128,7 @@ const cn = {
   },
 };
 
-// 见谅，英语比较渣...
+// 见谅，英语比较渣...这部分未更新哦
 const en = {
   loading: {
     fullTip: 'Please wait while loading resources',

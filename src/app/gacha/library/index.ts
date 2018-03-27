@@ -1,26 +1,30 @@
-import {Possibility} from '../interface/possibility';
-import {GachaItem} from '../interface/gacha-item';
+import { Possibility } from '../interface/possibility';
+import { GachaItem } from '../interface/gacha-item';
 import { GachaExecutorParams } from '../interface/gacha-executor';
 import { GachaPreProcessParams } from '../interface/gacha-pre-process';
 
 import { GachaProcessing } from './gacha-processing';
 import { AppendantProcessing } from './appendant-processing';
-import { getItemLevel } from './util/item-level';
 
-export const withAppendant = function (params: GachaExecutorParams): GachaItem[] {
-  const items = mainGacha(GachaProcessing, params);
-  const appendantItems = mainGacha(AppendantProcessing, params);
-  return mixArray<GachaItem>(items, appendantItems);
-};
-
-export const withoutAppendant = function (params: GachaExecutorParams): GachaItem[] {
-  return mainGacha(GachaProcessing, params);
+/**
+ * 抽取执行
+ * @param {GachaExecutorParams} params
+ * @returns {GachaItem[]}
+ */
+export const Gacha = function (params: GachaExecutorParams): GachaItem[] {
+  if (params.disableAppendant) {
+    return mainGacha(GachaProcessing, params);
+  } else {
+    const items = mainGacha(GachaProcessing, params);
+    const appendantItems = mainGacha(AppendantProcessing, params);
+    return mixArray<GachaItem>(items, appendantItems);
+  }
 };
 
 /**
  * 实际抽取物品的操作
- * @param itemProcessFunction 预设的处理器函数
- * @params params 抽取的参数集合
+ * @param {Function} itemProcessFunction 预设的处理器函数
+ * @param {GachaExecutorParams} params 抽取的参数集合
  * @returns {GachaItem[]}
  */
 const mainGacha = function (itemProcessFunction: Function, params: GachaExecutorParams): GachaItem[] {

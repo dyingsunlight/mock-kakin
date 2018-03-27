@@ -32,16 +32,23 @@
         {{ strRes.root.navigation.about }}
       </app-image-in-button>
       <div class="options">
-        <div class="input-wrapper">
-          <input type="checkbox" (change)="updateProtection($event.target.checked)" [checked]="state.enableProtection" id="enableProtection">
-          <label for="enableProtection">{{ strRes.root.gachaProtection }}</label>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="version">
-    {{ state.version }}
-  </div>
+        <!-- 如这些选项不想对用户可见，下列界面设置入口可以直接删除, 默认值 可以在 StateService 配置 -->
+        <!-- enableProtection 基础保底选项-->
+       <div class="input-wrapper">
+         <input type="checkbox" (change)="updateProtection($event.target.checked)" [checked]="state.enableProtection" id="enableProtection">
+         <label for="enableProtection">{{ strRes.root.gachaProtection }}</label>
+       </div>
+        <!-- enableExtensionHundredProtection 扩充百连保底选项-->
+       <div class="input-wrapper" *ngIf="state.UI && state.UI['extension']">
+         <input type="checkbox" (change)="updateExtensionHundredProtection($event.target.checked)" [checked]="state.enableExtensionHundredProtection" id="enableExtensionHundredProtection">
+         <label for="enableExtensionHundredProtection">{{ strRes.root.extensionHundredProtection }}</label>
+       </div>
+     </div>
+   </div>
+ </div>
+ <div class="version">
+   {{ state.version }}
+ </div>
 
 </div>
 <img class= "background" [src]="url.backgrounds + '/GachaBG.png'">

@@ -19,5 +19,8 @@ export class AppComponent implements OnInit {
   updateProtection(status: boolean) {
     this.state.enableProtection = status;
   }
+  updateExtensionHundredProtection(status: boolean) {
+    this.state.enableExtensionHundredProtection = status;
+  }
 }
 

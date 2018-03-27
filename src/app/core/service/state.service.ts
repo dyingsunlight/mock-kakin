@@ -5,7 +5,10 @@ import { strRes } from '../../language';
 
 @Injectable()
 export class StateService {
+  // 是否开启 基础保底默认值
   enableProtection = true;
+  // 是否开启 扩充百连保底默认值
+  enableExtensionHundredProtection = false;
   // 缓存对象，包含抽取的历史记录，以及已经加载过的URL历史
   // 预载时会先通过缓存对象筛选URL是否保留有记录，如果保留有记录则不再发送请求
   cache = new Cache();

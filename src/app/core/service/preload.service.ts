@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {GachaItem} from '../../gacha/interface/gacha-item';
-import {gachaWithAppendant} from '../../gacha/index';
+import {Gacha} from '../../gacha';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/retry';
@@ -26,7 +26,20 @@ export class PreloadService {
    * @returns {Observable<GachaItem[]>} 返回所有预载完成的物品列表
    */
   gacha(times: number, mode: string, onUpdate ?: Function): Observable<GachaItem[]> {
-    const list: GachaItem[] = gachaWithAppendant(times, mode, this.state.enableProtection, this.state.possibility[mode]);
+    const list: GachaItem[] = Gacha({
+      // 次数
+      times,
+      // 模式： standard, equipment, precision, extension 中的一种
+      mode,
+      // 禁用附件，开启时单次执行会获得两件物品，其中一个为附件
+      disableAppendant: false,
+      // 禁用保底，通过交给预处理器进行判断实现
+      disableProtection: !this.state.enableProtection,
+      // 禁用扩充百连保底
+      disableExtensionProtection: !this.state.enableExtensionHundredProtection,
+      // 抽取的配置
+      possible: this.state.possibility[mode],
+    });
     return Observable.create(observer => {
       this.waitForPreload(list, onUpdate).subscribe({
         complete: () => {
