@@ -9,7 +9,7 @@
           "factor": 72,
           "type": "stigmata",
           "contents": [
-            "丹朱·人偶师"
+            "绯玉丸"
           ]
         },
         {
@@ -18,7 +18,7 @@
 
           "type": "stigmata",
           "contents": [
-            "西琳", "德古拉", "李耳红", "埃及艳后"
+            "女娲", "爱因斯坦乐队", "开普勒", "俄国沙皇"
           ]
         },
         {
@@ -26,7 +26,7 @@
           "factor": 48,
           "type": "weapon",
           "contents": [
-            "雷切"
+            "残火之鸢"
           ]
         },
         {
@@ -34,8 +34,8 @@
           "factor": 48,
           "type": "weapon",
           "contents": [
-            "能量跃迁者", "百鸟问天", "妖刀·赤染樱", "圣遗物5th",
-            "圣遗物7th", "圣遗物7th"
+            "异形·赫尔之弓", "雨后誓言", "妖刀·赤染樱", "牛鬼切",
+            "樱花的誓约", "提尔的断腕"
           ]
         },
         {
@@ -323,49 +323,47 @@
       "possibility": [
         {
           "name": "S级女武神",
-          "factor": 88,
+          "factor": 100,
           "type": "character",
           "contents": [
-            "紫苑"
+            "炽翎"
           ]
         },
         {
-          "name": "A级女武神-德丽莎",
-          "factor": 525,
+          "name": "辛魂",
+          "factor": 300,
           "type": "character",
           "contents": [
-            "誓约",
-            "火舞"
+            "辛魂"
           ]
         },
         {
-          "name": "A级女武神-其他",
-          "factor": 265,
+          "name": "火舞|游侠|雪地",
+          "factor": 600,
           "type": "character",
           "contents": [
-            "强袭",
-            "深红"
+            "火舞", "游侠", "雪地"
           ]
         },
         {
           "name": "s女武神碎片",
-          "factor": 250,
+          "factor": 275,
           "type": "fragment",
           "contents": [
-            "神恩"
+            "炽翎"
           ]
         },
         {
-          "name": "a女武神碎片-德丽莎",
-          "factor": 1500,
+          "name": "辛魂 碎片",
+          "factor": 1650,
           "type": "fragment",
           "contents": [
-            "誓约", "火舞"
+            "辛魂"
           ]
         },
         {
-          "name": "a女武神碎片-其它",
-          "factor": 550,
+          "name": "火舞|游侠|雪地 碎片",
+          "factor": 990,
           "type": "fragment",
           "contents": [
             "强袭",  "深红"
@@ -413,10 +411,10 @@
     }
   },
   "user-interface": {
-    "version": "补给配置版本：2018.3.26 紫苑/人偶师/雷切",
+    "version": "补给配置版本：2018.3.29 绯玉丸/残火之鸢/炽翎",
     "supplement": {
       "precision": {
-        "banner": "GachaPicDollmakerKatanaRaikiri",
+        "banner": "GachaPicFoxFistLostfire",
         "banner-text": "精准补给。(点击此处查看补给记录)",
         "banner-title-image": "precision-supplement",
         "tip-text": "每十次补给必定会有4星或以上装备圣痕出现",
@@ -440,8 +438,8 @@
         "card": "equipment-card"
       },
       "extension": {
-        "banner": "GachaPicAddition18TheresaBirthday02",
-        "banner-text": "2018.3.22 紫苑扩充补给。(点击此处查看补给记录)",
+        "banner": "GachaPicAdditionVesion022",
+        "banner-text": "2018.3.30 炽翎扩充补给。(点击此处查看补给记录)",
         "banner-title-image": "event-supplement",
         "tip-text": "每十次补给必定会有A级或以上女武神出现",
         "tip-image": "valkyrja-tip",
