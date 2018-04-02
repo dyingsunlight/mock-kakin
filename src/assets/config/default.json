@@ -26,7 +26,7 @@
           "factor": 48,
           "type": "weapon",
           "contents": [
-            "残火之鸢"
+            "妖刀·赤染樱"
           ]
         },
         {
@@ -34,7 +34,7 @@
           "factor": 48,
           "type": "weapon",
           "contents": [
-            "异形·赫尔之弓", "雨后誓言", "妖刀·赤染樱", "牛鬼切",
+            "异形·赫尔之弓", "雨后誓言", "残火之鸢", "牛鬼切",
             "樱花的誓约", "提尔的断腕"
           ]
         },
@@ -411,10 +411,10 @@
     }
   },
   "user-interface": {
-    "version": "补给配置版本：2018.3.29 绯玉丸/残火之鸢/炽翎",
+    "version": "补给配置版本：2018.4.2 绯玉丸/赤染樱/炽翎",
     "supplement": {
       "precision": {
-        "banner": "GachaPicFoxFistLostfire",
+        "banner": "GachaPicFoxKatanaBloodSakura",
         "banner-text": "精准补给。(点击此处查看补给记录)",
         "banner-title-image": "precision-supplement",
         "tip-text": "每十次补给必定会有4星或以上装备圣痕出现",
