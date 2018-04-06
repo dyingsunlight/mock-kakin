@@ -16,7 +16,7 @@ export const weapon = {
   '狂怒者重炮': 'Cannon_B9_81_2',
   '核心聚能跑Delta': 'Cannon_B13_86_4',
   '尤弥尔之腕': 'Cannon_B14_87_4',
-  '苍玄之书': 'Cannon_B14_87_4',
+  '苍玄之书': 'Cannon_B15_121_4',
   '蚩尤巨炮': 'Cannon_B16_122_4',
   '量子毁灭者II型': 'Cannon_B17_130_4',
   '火刀真田': 'Cannon_B21_149_4',
