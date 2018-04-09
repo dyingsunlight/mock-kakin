@@ -26,7 +26,7 @@
           "factor": 48,
           "type": "weapon",
           "contents": [
-            "苍玄之书"
+            "鲜血之舞"
           ]
         },
         {
@@ -35,7 +35,7 @@
           "type": "weapon",
           "contents": [
             "超电磁手炮", "雷切", "残火之鸢", "火刀真田",
-            "日炎大剑", "鲜血之舞", "圣遗物11th"
+            "日炎大剑", "苍玄之书", "圣遗物11th"
           ]
         },
         {
@@ -411,10 +411,10 @@
     }
   },
   "user-interface": {
-    "version": "补给配置版本：2018.4.6 莎士比亚/苍玄之书/炽翎",
+    "version": "补给配置版本：2018.4.6 莎士比亚/鲜血之舞/炽翎",
     "supplement": {
       "precision": {
-        "banner": "GachaPicShakespeareCanonFuxi",
+        "banner": "GachaPicShakespeareClaymoreBlood",
         "banner-text": "精准补给。(点击此处查看补给记录)",
         "banner-title-image": "precision-supplement",
         "tip-text": "每十次补给必定会有4星或以上装备圣痕出现",
