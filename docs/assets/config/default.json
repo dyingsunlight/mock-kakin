@@ -9,7 +9,7 @@
           "factor": 72,
           "type": "stigmata",
           "contents": [
-            "莎士比亚"
+            "米开朗其罗"
           ]
         },
         {
@@ -18,7 +18,7 @@
 
           "type": "stigmata",
           "contents": [
-            "薛定谔", "岳母", "李耳红", "卡莲颂歌"
+            "浓姬", "德古拉", "薛定谔乐队", "牛顿"
           ]
         },
         {
@@ -26,7 +26,7 @@
           "factor": 48,
           "type": "weapon",
           "contents": [
-            "鲜血之舞"
+            "虚无之刃"
           ]
         },
         {
@@ -34,8 +34,8 @@
           "factor": 48,
           "type": "weapon",
           "contents": [
-            "超电磁手炮", "雷切", "残火之鸢", "火刀真田",
-            "日炎大剑", "苍玄之书", "圣遗物11th"
+            "妖精剑", "圣遗物3rd", "百手巨人初型", "圣遗物2nd",
+            "鲜血之舞", "犹大的誓约"
           ]
         },
         {
@@ -322,51 +322,53 @@
       "factor": 1,
       "possibility": [
         {
-          "name": "S级女武神",
-          "factor": 100,
+          "name": "S级女武神 - 鬼凯",
+          "factor": 88,
           "type": "character",
           "contents": [
-            "炽翎"
+            "鬼凯"
           ]
         },
         {
-          "name": "辛魂",
-          "factor": 300,
+          "name": "A级女武神 - 影舞\\强袭",
+          "factor": 525,
           "type": "character",
           "contents": [
-            "辛魂"
+            "影舞",
+            "强袭"
           ]
         },
         {
-          "name": "火舞|游侠|雪地",
-          "factor": 600,
+          "name": "A级女武神 - 卡莲\\浮华",
+          "factor": 265,
           "type": "character",
           "contents": [
-            "火舞", "游侠", "雪地"
+            "卡莲",
+            "浮华"
           ]
         },
         {
-          "name": "s女武神碎片",
-          "factor": 275,
+          "name": "S级女武神 - 鬼凯 碎片",
+          "factor": 250,
           "type": "fragment",
           "contents": [
-            "炽翎"
+            "鬼凯"
           ]
         },
         {
-          "name": "辛魂 碎片",
-          "factor": 1650,
+          "name": "A级女武神 - 影舞\\强袭 碎片",
+          "factor": 1500,
           "type": "fragment",
           "contents": [
-            "辛魂"
+            "影舞", "强袭"
           ]
         },
         {
-          "name": "火舞|游侠|雪地 碎片",
-          "factor": 990,
+          "name": "A级女武神 - 卡莲\\浮华 碎片",
+          "factor": 550,
           "type": "fragment",
           "contents": [
-            "强袭",  "深红"
+            "卡莲",  "浮华"
           ]
         },
         {
@@ -411,10 +413,10 @@
     }
   },
   "user-interface": {
-    "version": "补给配置版本：2018.4.6 莎士比亚/鲜血之舞/炽翎",
+    "version": "补给配置版本：2018.4.13 米开朗琪罗/虚无之刃/鬼凯",
     "supplement": {
       "precision": {
-        "banner": "GachaPicShakespeareClaymoreBlood",
+        "banner": "GachaPicMichelangeloKatanaNeant",
         "banner-text": "精准补给。(点击此处查看补给记录)",
         "banner-title-image": "precision-supplement",
         "tip-text": "每十次补给必定会有4星或以上装备圣痕出现",
@@ -438,8 +440,8 @@
         "card": "equipment-card"
       },
       "extension": {
-        "banner": "GachaPicAdditionVesion022",
-        "banner-text": "2018.3.30 炽翎扩充补给。(点击此处查看补给记录)",
+        "banner": "GachaPicAdditionMeiBirthday2018",
+        "banner-text": "2018.4.13 鬼凯扩充补给。(点击此处查看补给记录)",
         "banner-title-image": "event-supplement",
         "tip-text": "每十次补给必定会有A级或以上女武神出现",
         "tip-image": "valkyrja-tip",

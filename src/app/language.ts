@@ -25,7 +25,7 @@ const cn = {
   root: {
     rotationTip: '请将手机横屏以获得最佳的显示效果！',
     gachaProtection: '开启保底',
-    extensionHundredProtection: '扩百必S',
+    extensionHundredProtection: '扩充保底',
     navigation: {
       precision: '精准',
       standard: '标配',
