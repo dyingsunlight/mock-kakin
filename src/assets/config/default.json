@@ -26,7 +26,7 @@
           "factor": 48,
           "type": "weapon",
           "contents": [
-            "虚无之刃"
+            "圣遗物3rd"
           ]
         },
         {
@@ -34,7 +34,7 @@
           "factor": 48,
           "type": "weapon",
           "contents": [
-            "妖精剑", "圣遗物3rd", "百手巨人初型", "圣遗物2nd",
+            "妖精剑", "虚无之刃", "百手巨人初型", "圣遗物2nd",
             "鲜血之舞", "犹大的誓约"
           ]
         },
@@ -413,10 +413,10 @@
     }
   },
   "user-interface": {
-    "version": "补给配置版本：2018.4.13 米开朗琪罗/虚无之刃/鬼凯",
+    "version": "补给配置版本：2018.4.18 米开朗琪罗/圣遗物3rd/鬼凯",
     "supplement": {
       "precision": {
-        "banner": "GachaPicMichelangeloKatanaNeant",
+        "banner": "GachaPicMichelangeloKatana3rd",
         "banner-text": "精准补给。(点击此处查看补给记录)",
         "banner-title-image": "precision-supplement",
         "tip-text": "每十次补给必定会有4星或以上装备圣痕出现",
